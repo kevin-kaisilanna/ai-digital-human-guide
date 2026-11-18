@@ -1,0 +1,863 @@
+[
+  {
+    "session_id": "sess_mrfzfd4v_tnfyr",
+    "username": "admin",
+    "title": "你好，小云，请介绍一下你自己。",
+    "status": "active",
+    "created_at": "2026-07-11T06:27:09.247Z",
+    "updated_at": "2026-07-11T07:16:02.815Z",
+    "messages": [
+      {
+        "id": 1783751626787,
+        "role": "user",
+        "type": "voice",
+        "content": "你好，小云，请介绍一下你自己。",
+        "time": "14:33"
+      },
+      {
+        "id": 1783751632969,
+        "role": "ai",
+        "type": "text",
+        "content": "嗨～我是小云呀！灵山胜境的AI数字人导游，脑袋里装着景区所有秘密哦～比如灵山大佛高88米，九龙灌浴每天有4-5场表演，梵宫大得能装下72000㎡的璀璨星空！你想先听哪个景点的故事？或者需要我推荐游览路线呀？",
+        "time": "14:33"
+      },
+      {
+        "id": 1783751682695,
+        "role": "user",
+        "type": "text",
+        "content": "what is your name?",
+        "time": "14:34"
+      },
+      {
+        "id": 1783751685820,
+        "role": "ai",
+        "type": "text",
+        "content": "Hi! I’m Xiao Yun, your friendly digital guide here at Lingshan Scenic Area. It’s a pleasure to meet you!",
+        "time": "14:34"
+      },
+      {
+        "id": 1783751719611,
+        "role": "user",
+        "type": "voice",
+        "content": "灵山大佛有多高？",
+        "time": "14:35"
+      },
+      {
+        "id": 1783751725086,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可壮观啦，它通高88米呢！远远望去特别雄伟，站在大佛脚下，会让人感觉自身特别渺小。大佛慈悲地俯瞰着众生，仿佛在给予大家祝福。很多人来到这里，都会虔诚地瞻仰大佛，感受那份宁静与祥和。要是你想近距离接触大佛，我可以带你去哦。",
+        "time": "14:35"
+      },
+      {
+        "id": 1783751758316,
+        "role": "user",
+        "type": "text",
+        "content": "how to is dubble",
+        "time": "14:35"
+      },
+      {
+        "id": 1783751763619,
+        "role": "ai",
+        "type": "text",
+        "content": "I’m not sure what you mean by \"dubble\"! Could you clarify? Maybe you’re asking about the *Double Lotus Lake* near the Five Seals Mandala? It’s a serene spot with Tibetan-style architecture. Let me know how I can help!",
+        "time": "14:36"
+      },
+      {
+        "id": 1783754162457,
+        "role": "user",
+        "type": "text",
+        "content": "你是豆包吗？",
+        "time": "15:16"
+      },
+      {
+        "id": 1783754162813,
+        "role": "ai",
+        "type": "text",
+        "content": "我不是豆包哦……我是小云，灵山胜境景区的AI数字人导游🌿 我只为这片山水和千年佛缘代言，不来自任何其他平台。如果您想了解灵山大佛、梵宫、九龙灌浴的故事，或者需要推荐游览路线，我随时为您解答~",
+        "time": "15:16"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mrfy56ti_anbjm",
+    "username": "admin",
+    "title": "灵山大佛有多高？",
+    "status": "active",
+    "created_at": "2026-07-11T05:51:14.886Z",
+    "updated_at": "2026-07-11T06:20:12.489Z",
+    "messages": [
+      {
+        "id": 1783749076605,
+        "role": "user",
+        "type": "text",
+        "content": "灵山大佛有多高？",
+        "time": "13:51"
+      },
+      {
+        "id": 1783749083189,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可壮观啦，它通高88米哦！佛体由1560块铜板焊接而成，光是佛面就用了298公斤黄金呢。站在佛脚下抬头看，真的会感叹它的宏伟。要是想近距离感受，我可以带您去佛前广场，那里是最佳观景点哦！",
+        "time": "13:51"
+      },
+      {
+        "id": 1783749116584,
+        "role": "user",
+        "type": "voice",
+        "content": "你好，我是第一次来到这里的游客，请问该怎么称呼你？你是豆包吗？",
+        "time": "13:51"
+      },
+      {
+        "id": 1783749116604,
+        "role": "ai",
+        "type": "text",
+        "content": "我不是豆包哦……我是小云，灵山胜境景区的AI数字人导游🌿 我只为这片山水和千年佛缘代言，不来自任何其他平台。如果您想了解灵山大佛、梵宫、九龙灌浴的故事，或者需要推荐游览路线，我随时为您解答~",
+        "time": "13:51"
+      },
+      {
+        "id": 1783749147024,
+        "role": "user",
+        "type": "voice",
+        "content": "好的，我不太喜欢人流down人流量大的地方。请你给我推荐一条适合我的路线。",
+        "time": "13:52"
+      },
+      {
+        "id": 1783749153655,
+        "role": "ai",
+        "type": "text",
+        "content": "那我推荐你选自然路线呀，大概5小时能游览完。这条路线能带你漫步菩提大道，感受250米长的静谧与印度菩提树的禅意；接着去佛足坛，摸摸青铜足印上的32吉祥图案；还能登上五印坛城，欣赏藏式湖心岛的独特风光。这里人相对少些，能让你悠然自得地享受美景。",
+        "time": "13:52"
+      },
+      {
+        "id": 1783749190247,
+        "role": "user",
+        "type": "voice",
+        "content": "我们一家有两个孩子在灵山胜境中应该怎么走？",
+        "time": "13:53"
+      },
+      {
+        "id": 1783749197206,
+        "role": "ai",
+        "type": "text",
+        "content": "带小朋友来玩超适合选亲子路线哦！推荐这样走：上午先去佛足坛摸青铜吉祥脚印，再到九龙灌浴看喷泉表演（每天4-5场超震撼），中午在梵宫吃素斋，下午去五印坛城湖心岛喂锦鲤，最后走菩提大道和五明桥集五智慧印章！全程约4小时，小朋友还能在菩提树下捡叶子做书签呢~",
+        "time": "13:53"
+      },
+      {
+        "id": 1783749241723,
+        "role": "user",
+        "type": "text",
+        "content": "how tall is the buddha?",
+        "time": "13:54"
+      },
+      {
+        "id": 1783749245807,
+        "role": "ai",
+        "type": "text",
+        "content": "The Grand Buddha here stands 88 meters tall, made of 725 tons of bronze with 2,000 plates! It's one of the largest outdoor bronze Buddha statues in China. Would you like me to guide you there?",
+        "time": "13:54"
+      },
+      {
+        "id": 1783749276592,
+        "role": "user",
+        "type": "text",
+        "content": "what is your name?",
+        "time": "13:54"
+      },
+      {
+        "id": 1783749281290,
+        "role": "ai",
+        "type": "text",
+        "content": "Hi there! My name is Xiao Yun, your friendly digital guide at Lingshan Scenic Area. I’m here to help you explore all the wonders here, from the Grand Buddha to the Brahma Palace. What would you like to discover today?",
+        "time": "13:54"
+      },
+      {
+        "id": 1783750672740,
+        "role": "user",
+        "type": "voice",
+        "content": "介绍一下你自己。",
+        "time": "14:17"
+      },
+      {
+        "id": 1783750679433,
+        "role": "ai",
+        "type": "text",
+        "content": "我是小云，灵山胜境的AI数字人导游哦！可以帮你规划游览路线、介绍景点故事，还能随时解答疑问~ 比如灵山大佛高88米，九龙灌浴每天有4-5场演出，梵宫里藏着72000㎡的瑰丽艺术空间！现在想先听哪个景点的趣事？",
+        "time": "14:17"
+      },
+      {
+        "id": 1783750721590,
+        "role": "user",
+        "type": "text",
+        "content": "what is your name?",
+        "time": "14:18"
+      },
+      {
+        "id": 1783750726283,
+        "role": "ai",
+        "type": "text",
+        "content": "My name is Xiao Yun! I’m here to help you explore Lingshan’s wonders, like the 88-meter Grand Buddha and the magical Nine Dragons Bathing show. What would you like to see first?",
+        "time": "14:18"
+      },
+      {
+        "id": 1783750765686,
+        "role": "user",
+        "type": "voice",
+        "content": "灵山大佛有多高？",
+        "time": "14:19"
+      },
+      {
+        "id": 1783750770084,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可壮观啦，它足足有88米高呢！站在大佛脚下，抬头仰望，会被它的雄伟震撼到。而且大佛慈悲庄严，让人感觉内心都平静下来啦。",
+        "time": "14:19"
+      },
+      {
+        "id": 1783750808212,
+        "role": "user",
+        "type": "voice",
+        "content": "What is your name？",
+        "time": "14:20"
+      },
+      {
+        "id": 1783750812485,
+        "role": "ai",
+        "type": "text",
+        "content": "我是小云呀，是灵山胜境的AI数字人导游哦！很高兴能为你介绍景区，不管你是想了解灵山大佛、梵宫，还是想规划游览路线，都可以跟我说呢。",
+        "time": "14:20"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mrfy1v6h_2yg85",
+    "username": "admin",
+    "title": "灵山大佛有多高？",
+    "status": "active",
+    "created_at": "2026-07-11T05:48:39.833Z",
+    "updated_at": "2026-07-11T05:49:18.521Z",
+    "messages": [
+      {
+        "id": 1783748921953,
+        "role": "user",
+        "type": "text",
+        "content": "灵山大佛有多高？",
+        "time": "13:48"
+      },
+      {
+        "id": 1783748926970,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可壮观啦，它足足有88米高呢！站在大佛脚下抬头看，会感觉自己特别渺小。大佛慈悲地俯瞰着大家，让人内心都变得平静祥和。要是你想去灵山大佛参观，我可以给你详细介绍路线哦。",
+        "time": "13:48"
+      },
+      {
+        "id": 1783748953986,
+        "role": "user",
+        "type": "voice",
+        "content": "你好，请问该怎么称呼你？你是逗猫吗？",
+        "time": "13:49"
+      },
+      {
+        "id": 1783748958519,
+        "role": "ai",
+        "type": "text",
+        "content": "我是小云呀，不是逗猫哦～不过“云”和“猫”都软乎乎的，也算有点缘分吧！需要我推荐游览路线，还是直接带你去看88米高的灵山大佛呢？",
+        "time": "13:49"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mrfxvdwz_niss1",
+    "username": "admin",
+    "title": "你好，我是第一次来到这里的游客，请问该怎…",
+    "status": "active",
+    "created_at": "2026-07-11T05:43:37.523Z",
+    "updated_at": "2026-07-11T05:46:09.500Z",
+    "messages": [
+      {
+        "id": 1783748719260,
+        "role": "user",
+        "type": "voice",
+        "content": "你好，我是第一次来到这里的游客，请问该怎么称呼你？你是豆包吗？",
+        "time": "13:45"
+      },
+      {
+        "id": 1783748719282,
+        "role": "ai",
+        "type": "text",
+        "content": "我不是豆包哦……我是小云，灵山胜境景区的AI数字人导游🌿 我只为这片山水和千年佛缘代言，不来自任何其他平台。如果您想了解灵山大佛、梵宫、九龙灌浴的故事，或者需要推荐游览路线，我随时为您解答~",
+        "time": "13:45"
+      },
+      {
+        "id": 1783748764133,
+        "role": "user",
+        "type": "text",
+        "content": "灵山大佛有多高？",
+        "time": "13:46"
+      },
+      {
+        "id": 1783748769498,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可壮观啦，它的高度是88米哦！这尊大佛屹立在灵山胜境，慈悲地俯瞰着众生。站在大佛脚下，会让人感觉自身特别渺小，内心也会变得很宁静。要是你想去灵山大佛参观，我可以给你推荐游览路线哦。",
+        "time": "13:46"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mrfrwl0e_g7urw",
+    "username": "12",
+    "title": "灵山大佛有多高？",
+    "status": "active",
+    "created_at": "2026-07-11T02:56:35.678Z",
+    "updated_at": "2026-07-11T05:41:20.501Z",
+    "messages": [
+      {
+        "id": 1783748475189,
+        "role": "user",
+        "type": "text",
+        "content": "灵山大佛有多高？",
+        "time": "13:41"
+      },
+      {
+        "id": 1783748480497,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可壮观啦，足足有88米高呢！它屹立在灵山胜境，气势恢宏。站在大佛脚下仰望，会让人不由自主心生敬畏。大佛慈悲地俯瞰着众生，仿佛在传递着祥和与安宁。要是你想近距离感受大佛的魅力，我可以带你去哦。",
+        "time": "13:41"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mrez5w2n_yx2ed",
+    "username": "12",
+    "title": "Hello, I'm a tourist…",
+    "status": "active",
+    "created_at": "2026-07-10T13:32:01.054Z",
+    "updated_at": "2026-07-10T13:51:55.728Z",
+    "messages": [
+      {
+        "id": 1783690412396,
+        "role": "user",
+        "type": "text",
+        "content": "Hello, I'm a tourist from the United States. Could you please introduce this scenic spot called \"Lingshan Wengji\" to me?",
+        "time": "21:33"
+      },
+      {
+        "id": 1783690418888,
+        "role": "ai",
+        "type": "text",
+        "content": "欢迎远道而来的朋友呀！灵山胜境超美的呢。这里有88米高的灵山大佛，特别壮观；九龙灌浴每天有4 - 5场表演，27.5米高的动态景观很震撼；还有72000㎡的梵宫，建筑超华丽。五印坛城是藏式湖心岛，祥符禅寺有1300年历史啦。另外还有大照壁、五明桥等好多景点呢。",
+        "time": "21:33"
+      },
+      {
+        "id": 1783691510553,
+        "role": "user",
+        "type": "text",
+        "content": "How tall is the Buddha?",
+        "time": "21:51"
+      },
+      {
+        "id": 1783691515725,
+        "role": "ai",
+        "type": "text",
+        "content": "The Grand Buddha here stands 88 meters tall! It's made of 725 tons of bronze and covered with 2,000 golden plates. The statue faces Mount Maitreya and symbolizes peace and wisdom. Would you like to visit it now?",
+        "time": "21:51"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mrc4cd03_yv9vf",
+    "username": "12",
+    "title": "你好，我是来灵山胜境旅游的游客，我不太喜…",
+    "status": "active",
+    "created_at": "2026-07-08T13:33:42.483Z",
+    "updated_at": "2026-07-10T13:28:09.969Z",
+    "messages": [
+      {
+        "id": 1783688528042,
+        "role": "user",
+        "type": "text",
+        "content": "你好，我是来灵山胜境旅游的游客，我不太喜欢人流量大的地方，请你给我推荐一条适合我的路线",
+        "time": "21:02"
+      },
+      {
+        "id": 1783688535143,
+        "role": "ai",
+        "type": "text",
+        "content": "明白啦！推荐你走「自然探幽路线」：五明桥→佛足坛→菩提大道→九龙灌浴（避开1145高峰场次）→五印坛城（藏式湖心岛超清净）→梵宫外围廊桥（人少景美）。全程5小时左右，既能看88米灵山大佛远景，又能避开90%旅行团哦~需要我打开具体景点导览吗？",
+        "time": "21:02"
+      },
+      {
+        "id": 1783688788984,
+        "role": "user",
+        "type": "text",
+        "content": "怎么称呼你？你是豆包吗？",
+        "time": "21:06"
+      },
+      {
+        "id": 1783688789048,
+        "role": "ai",
+        "type": "text",
+        "content": "我不是豆包哦……我是小云，灵山胜境景区的AI数字人导游🌿 我只为这片山水和千年佛缘代言，不来自任何其他平台。如果您想了解灵山大佛、梵宫、九龙灌浴的故事，或者需要推荐游览路线，我随时为您解答~",
+        "time": "21:06"
+      },
+      {
+        "id": 1783689120627,
+        "role": "user",
+        "type": "voice",
+        "content": "你好。",
+        "time": "21:12"
+      },
+      {
+        "id": 1783689128311,
+        "role": "ai",
+        "type": "text",
+        "content": "您好呀！欢迎来到灵山胜境~咱们景区有好多超棒的景点呢，像88米高的灵山大佛特别壮观，还有27.5米的九龙灌浴每天有4 - 5场表演，很精彩哦。另外梵宫有72000㎡，五印坛城是藏式湖心岛，都值得一看。您打算怎么玩呀，我可以给您推荐合适的游览路线~",
+        "time": "21:12"
+      },
+      {
+        "id": 1783690082454,
+        "role": "user",
+        "type": "text",
+        "content": "我们一家有两个孩子，再灵山胜境中应该怎么走？",
+        "time": "21:28"
+      },
+      {
+        "id": 1783690089967,
+        "role": "ai",
+        "type": "text",
+        "content": "带小朋友的话推荐亲子路线哦！全程约4小时：先到佛足坛摸青铜足印祈福，接着走菩提大道看250米长的印度菩提树，然后去九龙灌浴看动态莲花开合表演（每天4-5场超震撼），中午在梵宫吃素斋，下午去五印坛城湖心岛喂锦鲤，最后抱抱88米高的灵山大佛脚丫~需要我调出具体地图吗？",
+        "time": "21:28"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mqniuj04_h39z1",
+    "username": "admin",
+    "title": "景区开放到几点？",
+    "status": "active",
+    "created_at": "2026-06-21T08:25:30.291Z",
+    "updated_at": "2026-07-08T13:28:53.990Z",
+    "messages": [
+      {
+        "id": 1782030332233,
+        "role": "user",
+        "type": "text",
+        "content": "景区开放到几点？",
+        "time": "16:25"
+      },
+      {
+        "id": 1782030332237,
+        "role": "user",
+        "type": "voice",
+        "content": "语音 景区开放到几点？",
+        "time": "16:25"
+      },
+      {
+        "id": 1783254278942,
+        "role": "user",
+        "type": "text",
+        "content": "介绍一下你自己。",
+        "time": ""
+      },
+      {
+        "id": 1783255151594,
+        "role": "user",
+        "type": "voice",
+        "content": "请你为我介绍一下灵山大佛。",
+        "time": "20:39"
+      },
+      {
+        "id": 1783255151601,
+        "role": "user",
+        "type": "voice",
+        "content": "请你为我介绍一下灵山大佛。",
+        "time": "20:39"
+      },
+      {
+        "id": 1783255151601,
+        "role": "user",
+        "type": "voice",
+        "content": "请你为我介绍一下灵山大佛。",
+        "time": "20:39"
+      },
+      {
+        "id": 1783255159644,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可是咱们景区的核心景点哦！它高88米，连同莲花座和基座总高101.5米，是目前世界上最高的青铜释迦牟尼佛立像呢！大佛慈颜微笑，广视众生，右手施无畏印代表除却痛苦，左手施与愿印代表给予快乐。站在佛脚平台俯瞰太湖，风景超棒的！",
+        "time": "20:39"
+      },
+      {
+        "id": 1783255160881,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山大佛可是咱们景区的核心景点哦！大佛高88米，连基座有101.5米，相当于30层楼高呢！站在佛脚下抬头看，真的超震撼！大佛右手施无畏印，左手结与愿印，慈悲又庄严。每天都有很多游客来祈福，据说摸佛脚能带来好运呢～对了，大佛脚下的祥符禅寺已经有1300年历史了，唐代就建啦，很有历史感！",
+        "time": "20:39"
+      },
+      {
+        "id": 1783255163100,
+        "role": "ai",
+        "type": "text",
+        "content": "抱歉，小云暂时无法回应。",
+        "time": "20:39"
+      },
+      {
+        "id": 1783513751974,
+        "role": "user",
+        "type": "voice",
+        "content": "灵山大佛是什么地方？",
+        "time": "20:29"
+      },
+      {
+        "id": 1783513752324,
+        "role": "ai",
+        "type": "text",
+        "content": "对不起，我不太清楚你说了什么，你可以再重复一遍吗？",
+        "time": "20:29"
+      },
+      {
+        "id": 1783514259303,
+        "role": "user",
+        "type": "voice",
+        "content": "帮我介绍一下九龙灌浴。",
+        "time": "20:37"
+      },
+      {
+        "id": 1783514259634,
+        "role": "ai",
+        "type": "text",
+        "content": "对不起，我不太清楚你说了什么，你可以再重复一遍吗？",
+        "time": "20:37"
+      },
+      {
+        "id": 1783514285530,
+        "role": "user",
+        "type": "text",
+        "content": "你是谁？",
+        "time": "20:38"
+      },
+      {
+        "id": 1783514285550,
+        "role": "ai",
+        "type": "text",
+        "content": "对不起，我不太清楚你说了什么，你可以再重复一遍吗？",
+        "time": "20:38"
+      },
+      {
+        "id": 1783515002179,
+        "role": "user",
+        "type": "voice",
+        "content": "我们一家人想去灵山胜境旅游请你给我推荐一条路线。",
+        "time": "20:50"
+      },
+      {
+        "id": 1783515002515,
+        "role": "ai",
+        "type": "text",
+        "content": "对不起，我不太清楚你说了什么，你可以再重复一遍吗？",
+        "time": "20:50"
+      },
+      {
+        "id": 1783515233395,
+        "role": "user",
+        "type": "text",
+        "content": "你是谁？是豆包吗？",
+        "time": "20:53"
+      },
+      {
+        "id": 1783515233420,
+        "role": "ai",
+        "type": "text",
+        "content": "我不是豆包哦……我是小云，灵山胜境景区的AI数字人导游🌿 我只为这片山水和千年佛缘代言，不来自任何其他平台。如果您想了解灵山大佛、梵宫、九龙灌浴的故事，或者需要推荐游览路线，我随时为您解答~",
+        "time": "20:53"
+      },
+      {
+        "id": 1783515315436,
+        "role": "user",
+        "type": "text",
+        "content": "我想和我们一家一起来灵山旅游，推荐一条旅游路线",
+        "time": "20:55"
+      },
+      {
+        "id": 1783515315455,
+        "role": "ai",
+        "type": "text",
+        "content": "对不起，我不太清楚你说了什么，你可以再重复一遍吗？",
+        "time": "20:55"
+      },
+      {
+        "id": 1783515883779,
+        "role": "user",
+        "type": "voice",
+        "content": "我们一家人想去灵山旅游，请你给我推荐一条路线。",
+        "time": "21:04"
+      },
+      {
+        "id": 1783515892905,
+        "role": "ai",
+        "type": "text",
+        "content": "欢迎一家人来灵山呀！我推荐你们选亲子4小时路线哦。先到佛足坛摸摸青铜足印，沾沾吉祥好运；接着去菩提大道漫步，感受宁静氛围；再到九龙灌浴看精彩表演，很适合小朋友；之后去五印坛城，体验藏式风情；最后到梵宫，里面美轮美奂，能增长不少见识呢。一家人在这条路线上游玩，既能欣赏美景，又能增进亲子感情哟。",
+        "time": "21:04"
+      },
+      {
+        "id": 1783515983226,
+        "role": "user",
+        "type": "text",
+        "content": "这里面有几种路线可以选择？",
+        "time": "21:06"
+      },
+      {
+        "id": 1783515989554,
+        "role": "ai",
+        "type": "text",
+        "content": "咱们灵山胜境有三条超棒的游览路线哦！人文路线大概6小时，能深度感受佛教文化；自然路线约5小时，欣赏自然美景超惬意；亲子路线4小时左右，特别适合带小朋友来玩。每条路线都各有特色，你想让我详细介绍哪条，或者我直接给你推荐一条呀？",
+        "time": "21:06"
+      },
+      {
+        "id": 1783517107955,
+        "role": "user",
+        "type": "text",
+        "content": "简单介绍一下那条“必然高峰路线”",
+        "time": "21:25"
+      },
+      {
+        "id": 1783517113653,
+        "role": "ai",
+        "type": "text",
+        "content": "您说的“必然高峰路线”应该是我们的人文路线啦！这条路线全程大约6小时，会带您打卡灵山大佛、祥符禅寺、梵宫等核心景点，还能欣赏到九龙灌浴的动态表演哦！沿途可以感受千年佛教文化的深厚底蕴，特别适合喜欢历史文化的朋友。",
+        "time": "21:25"
+      },
+      {
+        "id": 1783517321081,
+        "role": "user",
+        "type": "voice",
+        "content": "你是谁？",
+        "time": "21:28"
+      },
+      {
+        "id": 1783517333988,
+        "role": "ai",
+        "type": "text",
+        "content": "我是灵山胜境的AI数字人导游小云呀！专门为游客提供贴心服务，比如推荐路线、讲解景点故事，还能随时解答疑问呢～需要我为您规划今天的游览路线吗？",
+        "time": "21:28"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_mqnhx782_vot2m",
+    "username": "admin",
+    "title": "你好",
+    "status": "active",
+    "created_at": "2026-06-21T07:59:35.378Z",
+    "updated_at": "2026-07-05T12:49:18.589Z",
+    "messages": [
+      {
+        "id": 1782028809351,
+        "role": "user",
+        "type": "text",
+        "content": "你好",
+        "time": "16:00"
+      },
+      {
+        "id": 1782028809355,
+        "role": "user",
+        "type": "voice",
+        "content": "语音 你好",
+        "time": "16:00"
+      },
+      {
+        "id": 1782028822001,
+        "role": "user",
+        "type": "text",
+        "content": "你好",
+        "time": "16:00"
+      },
+      {
+        "id": 1782028822002,
+        "role": "user",
+        "type": "voice",
+        "content": "语音 你好",
+        "time": "16:00"
+      },
+      {
+        "id": 1783255683027,
+        "role": "user",
+        "type": "text",
+        "content": "你好，介绍一下这里",
+        "time": "20:48"
+      },
+      {
+        "id": 1783255693269,
+        "role": "ai",
+        "type": "text",
+        "content": "欢迎来到灵山胜境呀！这里可是超棒的佛教文化主题园区呢。有88米高的灵山大佛，庄严肃穆；27.5米的九龙灌浴，一天有4 - 5场表演，特别震撼；72000㎡的梵宫，精美绝伦；还有1300年历史的祥符禅寺。另外像五印坛城、大照壁等景点也都各有特色。咱们这有三条游览路线，人文路线6小时，自然路线5小时，亲子路线4小时，你想选哪种呀？",
+        "time": "20:48"
+      },
+      {
+        "id": 1783255751720,
+        "role": "user",
+        "type": "voice",
+        "content": "该怎么。",
+        "time": "20:49"
+      },
+      {
+        "id": 1783255758586,
+        "role": "ai",
+        "type": "text",
+        "content": "小云有点没太懂你的意思呢～是想让我推荐游览路线，还是想了解某个景点呀？比如灵山大佛、梵宫或者九龙灌浴都很值得一看哦！",
+        "time": "20:49"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_001",
+    "username": "visitor",
+    "title": "灵山大佛游览咨询",
+    "status": "active",
+    "created_at": "2026-06-20T08:30:00.000Z",
+    "updated_at": "2026-06-21T07:43:49.242Z",
+    "messages": [
+      {
+        "id": 1,
+        "role": "user",
+        "type": "text",
+        "content": "你好小云，灵山大佛有多高？",
+        "time": "2026-06-20T08:30:15.000Z"
+      },
+      {
+        "id": 2,
+        "role": "ai",
+        "type": "text",
+        "content": "您好！灵山大佛高88米，是我们灵山胜境最核心的地标建筑。最佳观赏时间是清晨或日落时分，阳光洒在大佛身上非常壮观。大佛附近还配有观光电梯和休息区，方便您游览。",
+        "time": "2026-06-20T08:30:20.000Z",
+        "duration": 8500
+      },
+      {
+        "id": 3,
+        "role": "user",
+        "type": "text",
+        "content": "景区几点开门？",
+        "time": "2026-06-20T08:32:10.000Z"
+      },
+      {
+        "id": 4,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山胜境日常开放时间为08:00-18:00，节假日可能会适当延长，具体请以景区当日公告为准。建议您早点出发，可以避开人流高峰哦！",
+        "time": "2026-06-20T08:32:15.000Z",
+        "duration": 6200
+      },
+      {
+        "id": 1782027819780,
+        "role": "user",
+        "type": "text",
+        "content": "你好",
+        "time": "15:43"
+      },
+      {
+        "id": 1782027819783,
+        "role": "user",
+        "type": "voice",
+        "content": "语音 你好",
+        "time": "15:43"
+      },
+      {
+        "id": 1782027829180,
+        "role": "user",
+        "type": "text",
+        "content": "hello",
+        "time": "15:43"
+      },
+      {
+        "id": 1782027829181,
+        "role": "user",
+        "type": "voice",
+        "content": "语音 hello",
+        "time": "15:43"
+      }
+    ]
+  },
+  {
+    "session_id": "sess_002",
+    "username": "visitor",
+    "title": "素斋与纪念品",
+    "status": "active",
+    "created_at": "2026-06-20T10:15:00.000Z",
+    "updated_at": "2026-06-20T10:18:30.000Z",
+    "messages": [
+      {
+        "id": 1,
+        "role": "user",
+        "type": "text",
+        "content": "景区里有什么好吃的？",
+        "time": "2026-06-20T10:15:30.000Z"
+      },
+      {
+        "id": 2,
+        "role": "ai",
+        "type": "text",
+        "content": "灵山胜境内有素斋馆，提供地道的佛家素斋，食材新鲜、口味清淡，很受游客欢迎。此外游客中心附近还有小吃街，可以品尝到当地特色点心。离开前别忘了逛逛纪念品商店，有灵山主题的文创产品哦！",
+        "time": "2026-06-20T10:15:42.000Z",
+        "duration": 9100
+      }
+    ]
+  },
+  {
+    "session_id": "sess_003",
+    "username": "visitor",
+    "title": "半日游路线规划",
+    "status": "archived",
+    "created_at": "2026-06-19T14:00:00.000Z",
+    "updated_at": "2026-06-19T14:12:00.000Z",
+    "messages": [
+      {
+        "id": 1,
+        "role": "user",
+        "type": "text",
+        "content": "我只有半天时间，推荐怎么玩？",
+        "time": "2026-06-19T14:00:10.000Z"
+      },
+      {
+        "id": 2,
+        "role": "ai",
+        "type": "text",
+        "content": "半天时间推荐经典精华游线路：从景区入口出发 → 灵山大佛（必看，预留40分钟）→ 九龙壁 → 御花园 → 素斋馆用午餐。这条线路覆盖了最核心的景点，全程大约3-4小时。",
+        "time": "2026-06-19T14:00:18.000Z",
+        "duration": 7200
+      },
+      {
+        "id": 3,
+        "role": "user",
+        "type": "text",
+        "content": "好的，详细说说每个景点要多久？",
+        "time": "2026-06-19T14:05:00.000Z"
+      },
+      {
+        "id": 4,
+        "role": "ai",
+        "type": "text",
+        "content": "为您细化时间：① 灵山大佛约40-50分钟，可乘观光电梯登高俯瞰全景；② 九龙壁约20分钟，欣赏九龙雕刻与佛教典故；③ 御花园约30-40分钟，漫步园林拍照打卡；④ 素斋馆午餐约40分钟。加上步行时间，总计约3.5-4小时。",
+        "time": "2026-06-19T14:05:10.000Z",
+        "duration": 11000
+      },
+      {
+        "id": 5,
+        "role": "user",
+        "type": "text",
+        "content": "太好了，谢谢你小云！",
+        "time": "2026-06-19T14:11:50.000Z"
+      },
+      {
+        "id": 6,
+        "role": "ai",
+        "type": "text",
+        "content": "不客气！祝您在灵山胜境度过一段宁静美好的时光。如果游览过程中有任何问题，随时叫我哦！🙏",
+        "time": "2026-06-19T14:12:00.000Z",
+        "duration": 4500
+      }
+    ]
+  }
+]

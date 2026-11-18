@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>景区导览 AI 数字人 — 管理后台</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #4f6ef6;
+  --primary-light: #e8ecff;
+  --sidebar-bg: #1a1d2e;
+  --sidebar-text: #a0a4b8;
+  --sidebar-active: #fff;
+  --bg: #f0f2f7;
+  --card-bg: #fff;
+  --text: #1a1a2e;
+  --text-secondary: #6b7280;
+  --border: #e5e7eb;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,.08);
+  --radius: 12px;
+}
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar { width: 240px; background: var(--sidebar-bg); display: flex; flex-direction: column; position: fixed; top: 0; left: 0; bottom: 0; z-index: 100; }
+.sidebar-logo { padding: 24px 20px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.sidebar-logo h1 { color: #fff; font-size: 18px; font-weight: 700; }
+.sidebar-logo span { color: var(--primary); }
+.sidebar-nav { flex: 1; padding: 12px 0; }
+.nav-item { display: flex; align-items: center; gap: 12px; padding: 12px 20px; color: var(--sidebar-text); cursor: pointer; transition: all .2s; border-left: 3px solid transparent; font-size: 14px; }
+.nav-item:hover { color: #d0d3e0; background: rgba(255,255,255,.04); }
+.nav-item.active { color: var(--sidebar-active); background: rgba(79,110,246,.15); border-left-color: var(--primary); font-weight: 600; }
+.nav-item .icon { width: 20px; text-align: center; font-size: 16px; }
+.nav-section { padding: 8px 20px 4px; font-size: 11px; color: #5a5e72; text-transform: uppercase; letter-spacing: 1px; margin-top: 8px; }
+.sidebar-footer { padding: 16px 20px; border-top: 1px solid rgba(255,255,255,.08); display: flex; align-items: center; gap: 10px; }
+.sidebar-footer .avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--primary); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 600; font-size: 14px; }
+.sidebar-footer .info { color: #a0a4b8; font-size: 13px; }
+.sidebar-footer .info strong { color: #e0e2e8; display: block; font-size: 13px; }
+
+/* Main */
+.main { margin-left: 240px; flex: 1; display: flex; flex-direction: column; }
+.header { background: var(--card-bg); padding: 16px 28px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+.header h2 { font-size: 20px; font-weight: 600; }
+.header-actions { display: flex; gap: 12px; align-items: center; }
+.btn { padding: 8px 16px; border-radius: 8px; border: none; cursor: pointer; font-size: 13px; font-weight: 500; transition: all .2s; display: inline-flex; align-items: center; gap: 6px; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: #3d5de7; }
+.btn-outline { background: var(--card-bg); color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { background: var(--bg); }
+.btn-sm { padding: 5px 10px; font-size: 12px; }
+.btn-danger { background: #fef2f2; color: var(--danger); border: 1px solid #fecaca; }
+.btn-danger:hover { background: #fee2e2; }
+.content { padding: 24px 28px; flex: 1; overflow-y: auto; }
+
+/* Page visibility */
+.page { display: none; }
+.page.active { display: block; }
+
+/* KPI Cards */
+.kpi-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 24px; }
+.kpi-card { background: var(--card-bg); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+.kpi-card .kpi-label { font-size: 13px; color: var(--text-secondary); margin-bottom: 8px; }
+.kpi-card .kpi-value { font-size: 32px; font-weight: 700; margin-bottom: 4px; }
+.kpi-card .kpi-change { font-size: 12px; display: flex; align-items: center; gap: 4px; }
+.kpi-change.up { color: var(--success); }
+.kpi-change.down { color: var(--danger); }
+.kpi-card .kpi-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 12px; }
+.kpi-icon.blue { background: #e8ecff; color: var(--primary); }
+.kpi-icon.green { background: #d1fae5; color: var(--success); }
+.kpi-icon.amber { background: #fef3c7; color: var(--warning); }
+.kpi-icon.purple { background: #ede9fe; color: #8b5cf6; }
+.kpi-icon.rose { background: #ffe4e6; color: #f43f5e; }
+
+/* Charts row */
+.charts-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.chart-card { background: var(--card-bg); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+.chart-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+.chart-wrap { position: relative; height: 220px; }
+.chart-wrap.tall { height: 280px; }
+.chart-wrap canvas { width: 100% !important; height: 100% !important; }
+
+/* Table */
+.table-wrap { background: var(--card-bg); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+.table-wrap h3 { font-size: 15px; font-weight: 600; margin-bottom: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; padding: 10px 12px; color: var(--text-secondary); font-weight: 500; border-bottom: 2px solid var(--border); font-size: 12px; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+tr:hover td { background: #f9fafb; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 500; }
+.badge-blue { background: #e8ecff; color: var(--primary); }
+.badge-green { background: #d1fae5; color: #059669; }
+.badge-amber { background: #fef3c7; color: #b45309; }
+
+/* Knowledge Base */
+.kb-layout { display: grid; grid-template-columns: 240px 1fr; gap: 16px; }
+.kb-sidebar { background: var(--card-bg); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
+.kb-tree-item { padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; color: var(--text-secondary); }
+.kb-tree-item:hover { background: var(--bg); }
+.kb-tree-item.active { background: var(--primary-light); color: var(--primary); font-weight: 600; }
+.kb-tree-item .count { margin-left: auto; font-size: 11px; background: var(--bg); padding: 1px 6px; border-radius: 8px; }
+.kb-tree-parent { font-weight: 600; font-size: 13px; margin-bottom: 4px; color: var(--text); }
+.kb-tree-children { padding-left: 16px; border-left: 2px solid var(--border); margin-left: 6px; }
+.kb-main { background: var(--card-bg); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+.kb-toolbar { display: flex; gap: 12px; margin-bottom: 20px; align-items: center; }
+.kb-search { flex: 1; padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; outline: none; }
+.kb-search:focus { border-color: var(--primary); }
+.upload-btn { cursor: pointer; }
+
+/* Digital Human */
+.dh-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.dh-preview { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: var(--radius); padding: 40px; display: flex; align-items: center; justify-content: center; flex-direction: column; min-height: 500px; position: relative; overflow: hidden; }
+.dh-preview::before { content: ''; position: absolute; inset: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.08)" d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom/cover; }
+.dh-avatar { width: 180px; height: 180px; border-radius: 50%; background: rgba(255,255,255,.2); backdrop-filter: blur(10px); display: flex; align-items: center; justify-content: center; font-size: 80px; position: relative; z-index: 1; border: 3px solid rgba(255,255,255,.4); }
+.dh-avatar .expression { position: absolute; }
+.dh-bg-name { color: rgba(255,255,255,.8); font-size: 14px; margin-top: 20px; position: relative; z-index: 1; }
+.dh-bg-name strong { color: #fff; font-size: 18px; display: block; }
+
+.dh-config { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); }
+.dh-tabs { display: flex; border-bottom: 1px solid var(--border); padding: 0 20px; }
+.dh-tab { padding: 14px 20px; cursor: pointer; font-size: 14px; color: var(--text-secondary); border-bottom: 2px solid transparent; transition: all .2s; }
+.dh-tab:hover { color: var(--text); }
+.dh-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+.dh-tab-content { padding: 24px; display: none; }
+.dh-tab-content.active { display: block; }
+.dh-option-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.dh-option { padding: 16px; border: 2px solid var(--border); border-radius: 10px; cursor: pointer; text-align: center; transition: all .2s; }
+.dh-option:hover { border-color: var(--primary); }
+.dh-option.active { border-color: var(--primary); background: var(--primary-light); }
+.dh-option .opt-icon { font-size: 32px; margin-bottom: 6px; }
+
+/* Reports */
+.reports-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.reports-grid .full { grid-column: 1 / -1; }
+
+/* Visitor App Preview */
+.visitor-preview { display: flex; align-items: center; justify-content: center; padding: 20px; }
+.phone-frame { width: 390px; height: 780px; background: #fff; border-radius: 40px; overflow: hidden; box-shadow: var(--shadow-lg), 0 0 0 2px #1a1a2e, 0 0 0 6px #e0e2e8; position: relative; display: flex; flex-direction: column; }
+.phone-status { height: 40px; background: #f8f9fa; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; font-size: 12px; font-weight: 600; }
+.phone-digital { flex: 1; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; position: relative; }
+.phone-avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, rgba(79,110,246,.4), rgba(139,92,246,.4)); display: flex; align-items: center; justify-content: center; font-size: 56px; border: 3px solid rgba(255,255,255,.3); }
+.phone-avatar-speak { animation: avatarPulse 1.5s ease-in-out infinite; }
+@keyframes avatarPulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(79,110,246,.5); } 50% { box-shadow: 0 0 0 20px rgba(79,110,246,0); } }
+.phone-greeting { color: rgba(255,255,255,.85); font-size: 14px; margin-top: 16px; text-align: center; padding: 0 30px; line-height: 1.6; }
+.phone-chat { flex: 1; background: #f8f9fa; padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+.chat-bubble { max-width: 80%; padding: 10px 14px; border-radius: 16px; font-size: 13px; line-height: 1.5; }
+.chat-bubble.ai { align-self: flex-start; background: #fff; border-bottom-left-radius: 4px; }
+.chat-bubble.user { align-self: flex-end; background: var(--primary); color: #fff; border-bottom-right-radius: 4px; }
+.chat-bubble.voice { background: #e8ecff; color: var(--primary); font-size: 12px; display: flex; align-items: center; gap: 6px; }
+.phone-input-bar { display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: #fff; border-top: 1px solid var(--border); }
+.phone-input-bar input { flex: 1; padding: 10px 14px; border: 1px solid var(--border); border-radius: 20px; font-size: 13px; outline: none; }
+.phone-input-bar input:focus { border-color: var(--primary); }
+.phone-input-bar .voice-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--primary-light); color: var(--primary); font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.phone-input-bar .send-btn { width: 40px; height: 40px; border-radius: 50%; border: none; background: var(--primary); color: #fff; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+
+/* Breadcrumb */
+.breadcrumb { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.breadcrumb span { color: var(--text); font-weight: 500; }
+
+/* Modal */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); display: flex; align-items: center; justify-content: center; z-index: 200; display: none; }
+.modal-overlay.show { display: flex; }
+.modal { background: #fff; border-radius: var(--radius); padding: 28px; width: 500px; max-height: 80vh; overflow-y: auto; box-shadow: var(--shadow-lg); }
+.modal h3 { margin-bottom: 20px; }
+.modal input, .modal textarea, .modal select { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; margin-bottom: 12px; outline: none; }
+.modal textarea { min-height: 100px; resize: vertical; }
+.modal .btn-row { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; }
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <h1>🏔️ 景区<span>AI</span>导览</h1>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section">运营管理</div>
+    <div class="nav-item active" data-page="dashboard">
+      <span class="icon">📊</span> 数据大屏
+    </div>
+    <div class="nav-item" data-page="knowledge">
+      <span class="icon">📚</span> 知识库管理
+    </div>
+    <div class="nav-item" data-page="digital-human">
+      <span class="icon">🧑</span> 数字人形象
+    </div>
+    <div class="nav-item" data-page="reports">
+      <span class="icon">📋</span> 游客报告
+    </div>
+    <div class="nav-section">演示</div>
+    <div class="nav-item" data-page="visitor">
+      <span class="icon">📱</span> 游客端预览
+    </div>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="avatar">李</div>
+    <div class="info">
+      <strong>李主任</strong>
+      景区管理员
+    </div>
+  </div>
+</aside>
+
+<!-- Main -->
+<main class="main">
+  <header class="header">
+    <h2 id="pageTitle">📊 数据大屏</h2>
+    <div class="header-actions">
+      <span style="color:var(--text-secondary);font-size:13px;">📅 2026年5月10日 周二 14:30</span>
+      <button class="btn btn-outline btn-sm">🔄 刷新</button>
+    </div>
+  </header>
+  <div class="content">
+
+    <!-- ==================== Dashboard ==================== -->
+    <div class="page active" id="page-dashboard">
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon blue">👥</div>
+          <div class="kpi-label">今日服务人次</div>
+          <div class="kpi-value">1,286</div>
+          <div class="kpi-change up">↑ 12.5% 较昨日</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon green">📅</div>
+          <div class="kpi-label">本周服务人次</div>
+          <div class="kpi-value">8,942</div>
+          <div class="kpi-change up">↑ 8.3% 较上周</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon amber">🟢</div>
+          <div class="kpi-label">当前在线用户</div>
+          <div class="kpi-value">32</div>
+          <div class="kpi-change" style="color:var(--text-secondary);">实时刷新中</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon purple">😊</div>
+          <div class="kpi-label">游客满意度</div>
+          <div class="kpi-value">92.5%</div>
+          <div class="kpi-change up">↑ 2.1% 较上周</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon rose">📖</div>
+          <div class="kpi-label">知识库条目</div>
+          <div class="kpi-value">156</div>
+          <div class="kpi-change" style="color:var(--text-secondary);">本周新增 12 条</div>
+        </div>
+      </div>
+
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>📊 本周服务人次趋势</h3>
+          <div class="chart-wrap"><canvas id="chartWeekly"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>📈 游客满意度趋势（近7天）</h3>
+          <div class="chart-wrap"><canvas id="chartSatisfaction"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>🔥 各景点关注热度</h3>
+          <div class="chart-wrap"><canvas id="chartSpots"></canvas></div>
+        </div>
+      </div>
+
+      <div class="charts-grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="table-wrap">
+          <h3>🏆 热门问答 Top 10</h3>
+          <table>
+            <thead><tr><th>#</th><th>问题</th><th>次数</th><th>满意度</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>这个亭子是什么时候建的？</td><td>328</td><td><span class="badge badge-green">94%</span></td></tr>
+              <tr><td>2</td><td>附近有卫生间吗？</td><td>291</td><td><span class="badge badge-green">98%</span></td></tr>
+              <tr><td>3</td><td>李白和这里有什么关系？</td><td>256</td><td><span class="badge badge-green">91%</span></td></tr>
+              <tr><td>4</td><td>这山上有什么传说故事？</td><td>234</td><td><span class="badge badge-green">89%</span></td></tr>
+              <tr><td>5</td><td>前面那条路通向哪里？</td><td>198</td><td><span class="badge badge-amber">87%</span></td></tr>
+              <tr><td>6</td><td>景区开放到几点？</td><td>187</td><td><span class="badge badge-green">96%</span></td></tr>
+              <tr><td>7</td><td>这里拍过什么电影吗？</td><td>165</td><td><span class="badge badge-amber">85%</span></td></tr>
+              <tr><td>8</td><td>这个建筑用什么材料建的？</td><td>143</td><td><span class="badge badge-green">90%</span></td></tr>
+              <tr><td>9</td><td>有推荐的游览路线吗？</td><td>132</td><td><span class="badge badge-green">93%</span></td></tr>
+              <tr><td>10</td><td>山顶海拔多高？</td><td>119</td><td><span class="badge badge-green">92%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chart-card">
+          <h3>🗺️ 游客关注类别分布</h3>
+          <div class="chart-wrap"><canvas id="chartCategories"></canvas></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Knowledge Base ==================== -->
+    <div class="page" id="page-knowledge">
+      <div class="kb-layout">
+        <div class="kb-sidebar">
+          <div class="kb-tree-parent">📁 知识分类</div>
+          <div style="margin-top:12px;">
+            <div class="kb-tree-item active" data-cat="all"><span>📋</span> 全部知识 <span class="count">156</span></div>
+            <div class="kb-tree-item" data-cat="history"><span>🏛️</span> 历史文化 <span class="count">48</span></div>
+            <div class="kb-tree-item" data-cat="spots"><span>🏔️</span> 景点介绍 <span class="count">56</span></div>
+            <div class="kb-tree-item" data-cat="facility"><span>🚻</span> 设施服务 <span class="count">22</span></div>
+            <div class="kb-tree-item" data-cat="events"><span>🎉</span> 活动资讯 <span class="count">18</span></div>
+            <div class="kb-tree-item" data-cat="faq"><span>❓</span> 常见问答 <span class="count">12</span></div>
+          </div>
+        </div>
+        <div class="kb-main">
+          <div class="kb-toolbar">
+            <input class="kb-search" placeholder="🔍 搜索知识库...">
+            <button class="btn btn-outline upload-btn">📤 上传文档</button>
+            <button class="btn btn-primary" onclick="openKnowModal()">＋ 新建知识</button>
+          </div>
+          <table>
+            <thead><tr><th>标题</th><th>分类</th><th>来源</th><th>更新时间</th><th>操作</th></tr></thead>
+            <tbody>
+              <tr><td>望岳亭 — 前世今生</td><td><span class="badge badge-blue">历史文化</span></td><td>景区史志.pdf</td><td>2026-05-08 14:30</td><td><button class="btn btn-outline btn-sm" onclick="openKnowModal('edit')">✏️ 编辑</button> <button class="btn btn-danger btn-sm">🗑️</button></td></tr>
+              <tr><td>太白诗廊 — 李白与景区的渊源</td><td><span class="badge badge-blue">历史文化</span></td><td>专家供稿</td><td>2026-05-07 10:15</td><td><button class="btn btn-outline btn-sm" onclick="openKnowModal('edit')">✏️ 编辑</button> <button class="btn btn-danger btn-sm">🗑️</button></td></tr>
+              <tr><td>观云台景点讲解词</td><td><span class="badge badge-blue">景点介绍</span></td><td>导游词整理.docx</td><td>2026-05-06 16:00</td><td><button class="btn btn-outline btn-sm" onclick="openKnowModal('edit')">✏️ 编辑</button> <button class="btn btn-danger btn-sm">🗑️</button></td></tr>
+              <tr><td>景区卫生间及服务设施分布</td><td><span class="badge badge-green">设施服务</span></td><td>景区导览图</td><td>2026-05-05 09:20</td><td><button class="btn btn-outline btn-sm" onclick="openKnowModal('edit')">✏️ 编辑</button> <button class="btn btn-danger btn-sm">🗑️</button></td></tr>
+              <tr><td>五一黄金周特别活动安排</td><td><span class="badge badge-amber">活动资讯</span></td><td>运营部</td><td>2026-05-04 11:45</td><td><button class="btn btn-outline btn-sm" onclick="openKnowModal('edit')">✏️ 编辑</button> <button class="btn btn-danger btn-sm">🗑️</button></td></tr>
+              <tr><td>山顶海拔高度常见问答</td><td><span class="badge badge-blue">常见问答</span></td><td>FAQ整理</td><td>2026-05-03 08:30</td><td><button class="btn btn-outline btn-sm" onclick="openKnowModal('edit')">✏️ 编辑</button> <button class="btn btn-danger btn-sm">🗑️</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Digital Human ==================== -->
+    <div class="page" id="page-digital-human">
+      <div class="dh-layout">
+        <div class="dh-preview">
+          <div class="dh-avatar">🧑‍🦰</div>
+          <div class="dh-bg-name">
+            <strong>小云</strong>
+            景区 AI 数字人导游
+          </div>
+        </div>
+        <div class="dh-config">
+          <div class="dh-tabs">
+            <div class="dh-tab active" data-dhtab="appearance">🎨 外观</div>
+            <div class="dh-tab" data-dhtab="clothing">👔 服装</div>
+            <div class="dh-tab" data-dhtab="voice">🎤 声音</div>
+            <div class="dh-tab" data-dhtab="background">🖼️ 背景</div>
+          </div>
+          <div class="dh-tab-content active" id="dhtab-appearance">
+            <p style="color:var(--text-secondary);font-size:13px;margin-bottom:16px;">性别</p>
+            <div class="dh-option-grid" style="grid-template-columns:1fr 1fr;">
+              <div class="dh-option active"><div class="opt-icon">👨</div>男性</div>
+              <div class="dh-option"><div class="opt-icon">👩</div>女性</div>
+            </div>
+            <p style="color:var(--text-secondary);font-size:13px;margin:16px 0 8px;">发型</p>
+            <div class="dh-option-grid">
+              <div class="dh-option active"><div class="opt-icon">💇</div>短发</div>
+              <div class="dh-option"><div class="opt-icon">💇‍♀️</div>中长发</div>
+              <div class="dh-option"><div class="opt-icon">👩‍🦰</div>古风发髻</div>
+            </div>
+            <p style="color:var(--text-secondary);font-size:13px;margin:16px 0 8px;">脸型</p>
+            <div class="dh-option-grid">
+              <div class="dh-option active"><div class="opt-icon">😊</div>标准型</div>
+              <div class="dh-option"><div class="opt-icon">😃</div>圆脸</div>
+              <div class="dh-option"><div class="opt-icon">🤔</div>瓜子脸</div>
+            </div>
+          </div>
+          <div class="dh-tab-content" id="dhtab-clothing">
+            <div class="dh-option-grid" style="grid-template-columns:1fr 1fr;">
+              <div class="dh-option active"><div class="opt-icon">👘</div>汉服 — 唐风</div>
+              <div class="dh-option"><div class="opt-icon">👔</div>现代职业装</div>
+              <div class="dh-option"><div class="opt-icon">🎽</div>民族服饰</div>
+              <div class="dh-option"><div class="opt-icon">🧥</div>宋韵长衫</div>
+            </div>
+          </div>
+          <div class="dh-tab-content" id="dhtab-voice">
+            <p style="color:var(--text-secondary);font-size:13px;margin-bottom:12px;">选择声线风格（点击试听）</p>
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div class="dh-option" style="display:flex;align-items:center;gap:12px;text-align:left;"><span style="font-size:24px;">🎤</span><div><strong>温柔女声</strong><br><span style="color:var(--text-secondary);font-size:12px;">亲切温和，适合历史文化讲解</span></div><button class="btn btn-outline btn-sm" style="margin-left:auto;">▶ 试听</button></div>
+              <div class="dh-option active" style="display:flex;align-items:center;gap:12px;text-align:left;"><span style="font-size:24px;">🎤</span><div><strong>沉稳男声</strong><br><span style="color:var(--text-secondary);font-size:12px;">庄重大气，适合正式讲解</span></div><button class="btn btn-outline btn-sm" style="margin-left:auto;">▶ 试听</button></div>
+              <div class="dh-option" style="display:flex;align-items:center;gap:12px;text-align:left;"><span style="font-size:24px;">🎤</span><div><strong>活泼少女声</strong><br><span style="color:var(--text-secondary);font-size:12px;">轻快明朗，适合亲子互动</span></div><button class="btn btn-outline btn-sm" style="margin-left:auto;">▶ 试听</button></div>
+            </div>
+          </div>
+          <div class="dh-tab-content" id="dhtab-background">
+            <p style="color:var(--text-secondary);font-size:13px;margin-bottom:12px;">选择聊天背景图</p>
+            <div class="dh-option-grid" style="grid-template-columns:1fr 1fr;">
+              <div class="dh-option active" style="padding:8px;"><div style="background:linear-gradient(135deg,#667eea,#764ba2);height:80px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">⛰️</div>山景日出</div>
+              <div class="dh-option" style="padding:8px;"><div style="background:linear-gradient(135deg,#1a1a2e,#16213e);height:80px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">🌙</div>夜景星空</div>
+              <div class="dh-option" style="padding:8px;"><div style="background:linear-gradient(135deg,#134e5e,#71b280);height:80px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">🌿</div>竹林幽径</div>
+              <div class="dh-option" style="padding:8px;"><div style="background:linear-gradient(135deg,#fceabb,#f8b500);height:80px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px;">🏛️</div>古建筑</div>
+            </div>
+            <button class="btn btn-outline" style="margin-top:16px;width:100%;">📤 上传自定义背景</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Reports ==================== -->
+    <div class="page" id="page-reports">
+      <div class="reports-grid">
+        <div class="chart-card">
+          <h3>😊 情感趋势分析（近7天）</h3>
+          <div class="chart-wrap"><canvas id="chartSentiment"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>🏆 热门问题排行榜 Top 10</h3>
+          <div class="chart-wrap"><canvas id="chartTopQ"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>📂 游客关注类别分布</h3>
+          <div class="chart-wrap"><canvas id="chartCatPie"></canvas></div>
+        </div>
+        <div class="chart-card">
+          <h3>💡 系统改进建议</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+            <div style="padding:12px;background:#fef3c7;border-radius:8px;font-size:13px;">⚠️ 最近10位游客询问"后山步道"，知识库中暂无此信息，建议补充。</div>
+            <div style="padding:12px;background:#d1fae5;border-radius:8px;font-size:13px;">✅ "卫生间位置"问答满意度 98%，无需调整。</div>
+            <div style="padding:12px;background:#fef3c7;border-radius:8px;font-size:13px;">⚠️ 下午2-4点客流量高峰，当前仅1位数字人在线，建议增加资源。</div>
+            <div style="padding:12px;background:#e8ecff;border-radius:8px;font-size:13px;">💡 游客对"亲子路线"提问增多 35%，建议新增亲子游专题。</div>
+            <div style="padding:12px;background:#fef3c7;border-radius:8px;font-size:13px;">⚠️ "李白典故"相关回答满意度下降至 85%，建议优化知识内容。</div>
+          </div>
+        </div>
+        <div class="chart-card full">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <h3>📋 详细问答记录</h3>
+            <button class="btn btn-outline btn-sm">📥 导出 PDF 报告</button>
+          </div>
+          <table style="margin-top:12px;">
+            <thead><tr><th>时间</th><th>游客ID</th><th>问题</th><th>情感</th><th>满意度</th></tr></thead>
+            <tbody>
+              <tr><td>14:32</td><td>V8872</td><td>望岳亭是什么时候建的？</td><td>😊 满意</td><td>95%</td></tr>
+              <tr><td>14:28</td><td>V8876</td><td>附近有卫生间吗？</td><td>😐 中性</td><td>100%</td></tr>
+              <tr><td>14:15</td><td>V8871</td><td>后山步道怎么走？</td><td>😐 中性</td><td>70%</td></tr>
+              <tr><td>13:58</td><td>V8865</td><td>李白跟这有关系吗？</td><td>😊 满意</td><td>90%</td></tr>
+              <tr><td>13:42</td><td>V8859</td><td>山顶海拔多高？</td><td>😊 满意</td><td>92%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== Visitor App Preview ==================== -->
+    <div class="page" id="page-visitor">
+      <div class="visitor-preview">
+        <div class="phone-frame">
+          <div class="phone-status">9:41 &nbsp;&nbsp;&nbsp; 📶 🔋</div>
+          <div class="phone-digital">
+            <div class="phone-avatar phone-avatar-speak">🧑‍🦰</div>
+            <div class="phone-greeting">
+              <strong>小云</strong> 正在为您讲解...<br>
+              "望岳亭建于清乾隆年间，是当年..."
+            </div>
+          </div>
+          <div class="phone-chat">
+            <div class="chat-bubble ai">你好！👋 我是你的AI导游<strong>小云</strong>，有什么想了解的吗？</div>
+            <div class="chat-bubble user">这个亭子是谁建的？</div>
+            <div class="chat-bubble ai">望岳亭是清乾隆年间（公元1750年）由当地知县王明远主持修建的。你看亭子顶上的飞檐，是典型的清代官式建筑风格～</div>
+            <div class="chat-bubble voice user">🎤 语音 5''</div>
+            <div class="chat-bubble ai">好的！关于李白的典故——相传李白曾在安史之乱期间在此隐居三个月，留下了"云深不知处，只在此山中"的名句。前面你看到的太白诗廊就是为纪念他而建的 😊</div>
+          </div>
+          <div class="phone-input-bar">
+            <button class="voice-btn">🎤</button>
+            <input type="text" placeholder="打字或按住说话...">
+            <button class="send-btn">➤</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Knowledge Modal -->
+<div class="modal-overlay" id="knowModal">
+  <div class="modal">
+    <h3 id="knowModalTitle">📝 新建知识</h3>
+    <label>标题</label>
+    <input type="text" id="knowTitle" placeholder="请输入知识标题">
+    <label>分类</label>
+    <select id="knowCat">
+      <option>历史文化</option><option>景点介绍</option><option>设施服务</option><option>活动资讯</option><option>常见问答</option>
+    </select>
+    <label>内容</label>
+    <textarea id="knowContent" placeholder="请输入知识内容..."></textarea>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="closeKnowModal()">取消</button>
+      <button class="btn btn-primary" onclick="closeKnowModal()">保存</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// === Navigation ===
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+    item.classList.add('active');
+    const page = item.dataset.page;
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + page).classList.add('active');
+    const titles = { dashboard: '📊 数据大屏', knowledge: '📚 知识库管理', 'digital-human': '🧑 数字人形象配置', reports: '📋 游客感受度报告', visitor: '📱 游客端 App 预览' };
+    document.getElementById('pageTitle').textContent = titles[page] || page;
+    if (page === 'dashboard') initDashboardCharts();
+    if (page === 'reports') initReportCharts();
+    if (page === 'visitor') startTypingDemo();
+  });
+});
+
+// === Digital Human Tabs ===
+document.querySelectorAll('.dh-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.dh-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    document.querySelectorAll('.dh-tab-content').forEach(c => c.classList.remove('active'));
+    document.getElementById('dhtab-' + tab.dataset.dhtab).classList.add('active');
+  });
+});
+
+// === Option selection ===
+document.querySelectorAll('.dh-option').forEach(opt => {
+  opt.addEventListener('click', function() {
+    const parent = this.parentElement;
+    parent.querySelectorAll('.dh-option').forEach(o => o.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+
+// === Knowledge Modal ===
+function openKnowModal(mode) {
+  document.getElementById('knowModal').classList.add('show');
+  document.getElementById('knowModalTitle').textContent = mode === 'edit' ? '✏️ 编辑知识' : '📝 新建知识';
+}
+function closeKnowModal() {
+  document.getElementById('knowModal').classList.remove('show');
+}
+document.getElementById('knowModal').addEventListener('click', function(e) {
+  if (e.target === this) closeKnowModal();
+});
+
+// === Charts ===
+function initDashboardCharts() {
+  // Weekly visitors
+  new Chart(document.getElementById('chartWeekly'), {
+    type: 'bar',
+    data: {
+      labels: ['周一','周二','周三','周四','周五','周六','周日'],
+      datasets: [{ data: [1102,1286,1350,1420,1580,1820,1680], backgroundColor: '#4f6ef6', borderRadius: 6 }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { y: { grid: { color: '#f0f0f0' } } } }
+  });
+
+  // Satisfaction trend
+  new Chart(document.getElementById('chartSatisfaction'), {
+    type: 'line',
+    data: {
+      labels: ['5/4','5/5','5/6','5/7','5/8','5/9','5/10'],
+      datasets: [
+        { label: '满意', data: [88,90,89,91,92,93,92.5], borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,.1)', fill: true, tension: .4 },
+        { label: '中性', data: [8,7,8,6,5,5,5.5], borderColor: '#f59e0b', backgroundColor: 'rgba(245,158,11,.1)', fill: true, tension: .4 },
+        { label: '不满', data: [4,3,3,3,3,2,2], borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,.1)', fill: true, tension: .4 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 8, padding: 16 } } }, scales: { y: { min: 0, max: 100, grid: { color: '#f0f0f0' } } } }
+  });
+
+  // Spots
+  new Chart(document.getElementById('chartSpots'), {
+    type: 'bar',
+    data: {
+      labels: ['望岳亭','太白诗廊','观云台','古栈道','龙潭瀑布','山顶广场'],
+      datasets: [{ data: [428,391,356,298,245,187], backgroundColor: ['#4f6ef6','#8b5cf6','#ec4899','#f59e0b','#10b981','#06b6d4'], borderRadius: 6 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { grid: { color: '#f0f0f0' } } } }
+  });
+
+  // Categories
+  new Chart(document.getElementById('chartCategories'), {
+    type: 'doughnut',
+    data: {
+      labels: ['历史文化','景点介绍','设施服务','路线推荐','其他'],
+      datasets: [{ data: [35,28,18,12,7], backgroundColor: ['#4f6ef6','#10b981','#f59e0b','#8b5cf6','#ec4899'] }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 8, padding: 12 } } } }
+  });
+}
+
+function initReportCharts() {
+  // Sentiment trend
+  new Chart(document.getElementById('chartSentiment'), {
+    type: 'line',
+    data: {
+      labels: ['5/4','5/5','5/6','5/7','5/8','5/9','5/10'],
+      datasets: [
+        { label: '满意', data: [85,88,87,90,91,92,93], borderColor: '#10b981', tension: .4, fill: false },
+        { label: '中性', data: [10,8,9,7,6,5,5], borderColor: '#f59e0b', tension: .4, fill: false },
+        { label: '不满', data: [5,4,4,3,3,3,2], borderColor: '#ef4444', tension: .4, fill: false }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 8 } } }, scales: { y: { min: 0, max: 100 } } }
+  });
+
+  // Top Q
+  new Chart(document.getElementById('chartTopQ'), {
+    type: 'bar',
+    data: {
+      labels: ['亭子年代','卫生间','李白','传说','路线','开放时间','电影','建筑材料','路线推荐','海拔'],
+      datasets: [{ data: [328,291,256,234,198,187,165,143,132,119], backgroundColor: '#4f6ef6', borderRadius: 4 }]
+    },
+    options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+  });
+
+  // Category pie
+  new Chart(document.getElementById('chartCatPie'), {
+    type: 'pie',
+    data: {
+      labels: ['历史文化','景点介绍','设施服务','路线推荐','活动资讯','其他'],
+      datasets: [{ data: [30,25,18,15,8,4], backgroundColor: ['#4f6ef6','#10b981','#f59e0b','#8b5cf6','#ec4899','#94a3b8'] }]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 8 } } } }
+  });
+}
+
+// === Visitor typing demo ===
+function startTypingDemo() {
+  const chat = document.querySelector('#page-visitor .phone-chat');
+  if (chat.dataset.demo) return;
+  chat.dataset.demo = '1';
+}
+
+// Init dashboard charts on load
+initDashboardCharts();
+</script>
+</body>
+</html>

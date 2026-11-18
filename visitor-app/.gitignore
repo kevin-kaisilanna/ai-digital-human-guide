@@ -1,0 +1,6 @@
+# Capacitor — 提交平台工程但忽略构建产物
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/captures/

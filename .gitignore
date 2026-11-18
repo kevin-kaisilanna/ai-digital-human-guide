@@ -1,0 +1,49 @@
+# ---------- 依赖 ----------
+node_modules/
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+*.egg-info/
+
+# ---------- 环境变量与密钥 ----------
+.env
+.env.local
+*.env
+apiKEY.txt
+!.env.example
+
+# ---------- 构建产物 ----------
+dist/
+build/
+*.tsbuildinfo
+.gradle/
+android/.gradle/
+android/app/build/
+android/build/
+*.apk
+*.aab
+*.ipa
+
+# ---------- 运行时数据 ----------
+*.log
+logs/
+*.db-journal
+uploads/
+temp/
+tmp/
+
+# ---------- 系统与编辑器 ----------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+nul
+
+# ---------- 发布用大文件（走 GitHub Release，不进仓库） ----------
+release-assets/
+*.zip
+submit/01-产品源代码和可执行文件/33012214作品.zip

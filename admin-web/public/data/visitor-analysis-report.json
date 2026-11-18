@@ -1,0 +1,3160 @@
+{
+  "meta": {
+    "totalRecords": 777,
+    "uniqueTourists": 756,
+    "attractions": [
+      "灵山大佛",
+      "灵山胜境",
+      "禅意小镇·拈花湾"
+    ],
+    "dataSource": "经典景区旅游数据行为分析数据",
+    "generatedAt": "2026-06-18 12:25:39",
+    "dateRange": [
+      "2025-01-03",
+      "2025-12-31"
+    ]
+  },
+  "dashboard": {
+    "totalVisitors": 777,
+    "avgSatisfaction": 3.07,
+    "avgStayDuration": 4.0,
+    "avgTotalCost": 916.0,
+    "totalRevenue": 711705,
+    "satisfactionDistribution": [
+      {
+        "rating": 2,
+        "count": 134
+      },
+      {
+        "rating": 3,
+        "count": 469
+      },
+      {
+        "rating": 4,
+        "count": 163
+      },
+      {
+        "rating": 5,
+        "count": 11
+      }
+    ],
+    "spendingBreakdown": [
+      {
+        "category": "门票",
+        "key": "ticket",
+        "total": 143442,
+        "percentage": 20.2
+      },
+      {
+        "category": "餐饮",
+        "key": "food",
+        "total": 187288,
+        "percentage": 26.3
+      },
+      {
+        "category": "购物",
+        "key": "shopping",
+        "total": 193893,
+        "percentage": 27.2
+      },
+      {
+        "category": "交通",
+        "key": "transport",
+        "total": 103895,
+        "percentage": 14.6
+      },
+      {
+        "category": "娱乐",
+        "key": "entertainment",
+        "total": 83186,
+        "percentage": 11.7
+      }
+    ],
+    "typeDistribution": [
+      {
+        "type": "风景名胜与休闲度假",
+        "count": 777,
+        "percentage": 100.0,
+        "avgSatisfaction": 3.07,
+        "avgCost": 916.0,
+        "avgStayDuration": 4.0
+      }
+    ],
+    "demographics": {
+      "ageGroups": [
+        {
+          "group": "0-18岁",
+          "count": 0
+        },
+        {
+          "group": "19-30岁",
+          "count": 275
+        },
+        {
+          "group": "31-45岁",
+          "count": 303
+        },
+        {
+          "group": "46-60岁",
+          "count": 142
+        },
+        {
+          "group": "60岁以上",
+          "count": 57
+        }
+      ],
+      "genderSplit": {
+        "男": 401,
+        "女": 376
+      },
+      "groupSize": [
+        {
+          "groupSize": 1,
+          "count": 111,
+          "avgTotalCost": 653.0
+        },
+        {
+          "groupSize": 2,
+          "count": 273,
+          "avgTotalCost": 776.0
+        },
+        {
+          "groupSize": 3,
+          "count": 219,
+          "avgTotalCost": 974.0
+        },
+        {
+          "groupSize": 4,
+          "count": 150,
+          "avgTotalCost": 1160.0
+        },
+        {
+          "groupSize": 5,
+          "count": 24,
+          "avgTotalCost": 1673.0
+        }
+      ]
+    }
+  },
+  "attention": {
+    "topAttractions": [
+      {
+        "attraction_name": "灵山大佛",
+        "visitorCount": 286,
+        "avgStayDuration": 4.0,
+        "avgTotalCost": 870.0,
+        "avgSatisfaction": 3.12
+      },
+      {
+        "attraction_name": "禅意小镇·拈花湾",
+        "visitorCount": 255,
+        "avgStayDuration": 4.0,
+        "avgTotalCost": 957.0,
+        "avgSatisfaction": 3.03
+      },
+      {
+        "attraction_name": "灵山胜境",
+        "visitorCount": 236,
+        "avgStayDuration": 4.0,
+        "avgTotalCost": 927.0,
+        "avgSatisfaction": 3.04
+      }
+    ],
+    "typeDistribution": [
+      {
+        "type": "风景名胜与休闲度假",
+        "count": 777,
+        "percentage": 100.0,
+        "avgSatisfaction": 3.07,
+        "avgCost": 916.0,
+        "avgStayDuration": 4.0
+      }
+    ],
+    "spendingBreakdown": [
+      {
+        "category": "门票",
+        "key": "ticket",
+        "total": 143442,
+        "percentage": 20.2
+      },
+      {
+        "category": "餐饮",
+        "key": "food",
+        "total": 187288,
+        "percentage": 26.3
+      },
+      {
+        "category": "购物",
+        "key": "shopping",
+        "total": 193893,
+        "percentage": 27.2
+      },
+      {
+        "category": "交通",
+        "key": "transport",
+        "total": 103895,
+        "percentage": 14.6
+      },
+      {
+        "category": "娱乐",
+        "key": "entertainment",
+        "total": 83186,
+        "percentage": 11.7
+      }
+    ]
+  },
+  "sentiment": {
+    "overview": {
+      "distribution": [
+        {
+          "rating": 2,
+          "count": 134
+        },
+        {
+          "rating": 3,
+          "count": 469
+        },
+        {
+          "rating": 4,
+          "count": 163
+        },
+        {
+          "rating": 5,
+          "count": 11
+        }
+      ],
+      "averageSatisfaction": 3.07,
+      "totalRecords": 777
+    },
+    "dailyTrend": [
+      {
+        "date_str": "2025-01-03",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-01-04",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-01-09",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-01-12",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-01-13",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-01-14",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-01-17",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-01-18",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-01-19",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-01-23",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-01-25",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-01-26",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-01-27",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-01-29",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-01-30",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-01",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-03",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-04",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-02-08",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-02-09",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-11",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-13",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-15",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-17",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-18",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-19",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-22",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-26",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-02-27",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-02-28",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-03-01",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-03-02",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-03",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-03-05",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-06",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-07",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-03-09",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-03-10",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-03-11",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-13",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-14",
+        "avgSatisfaction": 4.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-15",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-03-16",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-17",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-03-18",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-03-21",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-03-22",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-03-23",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-03-24",
+        "avgSatisfaction": 3.5,
+        "count": 4
+      },
+      {
+        "date_str": "2025-03-25",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-03-26",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-03-27",
+        "avgSatisfaction": 2.75,
+        "count": 4
+      },
+      {
+        "date_str": "2025-03-29",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-03-30",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-01",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-02",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-04-05",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-06",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-04-07",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-04-08",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-04-09",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-04-10",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-04-11",
+        "avgSatisfaction": 2.75,
+        "count": 4
+      },
+      {
+        "date_str": "2025-04-12",
+        "avgSatisfaction": 3.0,
+        "count": 5
+      },
+      {
+        "date_str": "2025-04-13",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-14",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-04-15",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-04-16",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-04-17",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-04-18",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-19",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-20",
+        "avgSatisfaction": 2.5,
+        "count": 4
+      },
+      {
+        "date_str": "2025-04-22",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-04-23",
+        "avgSatisfaction": 2.86,
+        "count": 7
+      },
+      {
+        "date_str": "2025-04-24",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-04-25",
+        "avgSatisfaction": 4.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-26",
+        "avgSatisfaction": 2.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-04-27",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-28",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-04-29",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-04-30",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-05-01",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-02",
+        "avgSatisfaction": 4.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-05-03",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-05-04",
+        "avgSatisfaction": 3.11,
+        "count": 9
+      },
+      {
+        "date_str": "2025-05-05",
+        "avgSatisfaction": 2.75,
+        "count": 4
+      },
+      {
+        "date_str": "2025-05-06",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-07",
+        "avgSatisfaction": 3.33,
+        "count": 6
+      },
+      {
+        "date_str": "2025-05-08",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-09",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-05-10",
+        "avgSatisfaction": 3.75,
+        "count": 4
+      },
+      {
+        "date_str": "2025-05-12",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-05-13",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-05-14",
+        "avgSatisfaction": 3.0,
+        "count": 5
+      },
+      {
+        "date_str": "2025-05-15",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-05-16",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-05-17",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-18",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-05-19",
+        "avgSatisfaction": 3.17,
+        "count": 6
+      },
+      {
+        "date_str": "2025-05-20",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-05-21",
+        "avgSatisfaction": 2.8,
+        "count": 5
+      },
+      {
+        "date_str": "2025-05-22",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-24",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-05-25",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-05-26",
+        "avgSatisfaction": 2.8,
+        "count": 5
+      },
+      {
+        "date_str": "2025-05-27",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-05-28",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-29",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-30",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-05-31",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-06-01",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-03",
+        "avgSatisfaction": 3.0,
+        "count": 5
+      },
+      {
+        "date_str": "2025-06-04",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-06-05",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-06-06",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-07",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-06-08",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-06-09",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-06-10",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-06-11",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-06-12",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-06-13",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-14",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-06-16",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-06-17",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-18",
+        "avgSatisfaction": 3.2,
+        "count": 5
+      },
+      {
+        "date_str": "2025-06-19",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-20",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-21",
+        "avgSatisfaction": 2.5,
+        "count": 4
+      },
+      {
+        "date_str": "2025-06-22",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-06-23",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-24",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-06-25",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-26",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-06-27",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-06-28",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-06-30",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-01",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-07-02",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-03",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-04",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-05",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-06",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-07-07",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-08",
+        "avgSatisfaction": 2.75,
+        "count": 4
+      },
+      {
+        "date_str": "2025-07-09",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-10",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-11",
+        "avgSatisfaction": 3.6,
+        "count": 5
+      },
+      {
+        "date_str": "2025-07-12",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-13",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-07-14",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-15",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-16",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-17",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-18",
+        "avgSatisfaction": 3.71,
+        "count": 7
+      },
+      {
+        "date_str": "2025-07-20",
+        "avgSatisfaction": 3.0,
+        "count": 5
+      },
+      {
+        "date_str": "2025-07-21",
+        "avgSatisfaction": 3.17,
+        "count": 6
+      },
+      {
+        "date_str": "2025-07-22",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-23",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-07-24",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-07-25",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-26",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-27",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-07-28",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-07-31",
+        "avgSatisfaction": 2.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-01",
+        "avgSatisfaction": 4.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-08-02",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-03",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-04",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-08-05",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-08-06",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-07",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-08",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-09",
+        "avgSatisfaction": 3.5,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-10",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-12",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-13",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-14",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-08-15",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-16",
+        "avgSatisfaction": 3.2,
+        "count": 5
+      },
+      {
+        "date_str": "2025-08-17",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-18",
+        "avgSatisfaction": 2.75,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-19",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-08-20",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-08-21",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-22",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-24",
+        "avgSatisfaction": 3.17,
+        "count": 6
+      },
+      {
+        "date_str": "2025-08-25",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-26",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-27",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-08-28",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-08-29",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-08-30",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-08-31",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-09-01",
+        "avgSatisfaction": 3.0,
+        "count": 5
+      },
+      {
+        "date_str": "2025-09-02",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-09-03",
+        "avgSatisfaction": 2.75,
+        "count": 8
+      },
+      {
+        "date_str": "2025-09-04",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-09-05",
+        "avgSatisfaction": 3.12,
+        "count": 8
+      },
+      {
+        "date_str": "2025-09-06",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-09-08",
+        "avgSatisfaction": 3.5,
+        "count": 4
+      },
+      {
+        "date_str": "2025-09-09",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-09-10",
+        "avgSatisfaction": 3.0,
+        "count": 5
+      },
+      {
+        "date_str": "2025-09-11",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-09-12",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-09-13",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-09-14",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-09-15",
+        "avgSatisfaction": 2.6,
+        "count": 5
+      },
+      {
+        "date_str": "2025-09-16",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-09-17",
+        "avgSatisfaction": 2.71,
+        "count": 7
+      },
+      {
+        "date_str": "2025-09-18",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-09-19",
+        "avgSatisfaction": 3.0,
+        "count": 9
+      },
+      {
+        "date_str": "2025-09-20",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-09-21",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-09-22",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-09-23",
+        "avgSatisfaction": 2.8,
+        "count": 5
+      },
+      {
+        "date_str": "2025-09-24",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-09-25",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-09-26",
+        "avgSatisfaction": 3.2,
+        "count": 5
+      },
+      {
+        "date_str": "2025-09-27",
+        "avgSatisfaction": 2.4,
+        "count": 5
+      },
+      {
+        "date_str": "2025-09-28",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-09-29",
+        "avgSatisfaction": 3.4,
+        "count": 5
+      },
+      {
+        "date_str": "2025-09-30",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-01",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-10-02",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-05",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-07",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-08",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-09",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-10",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-11",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-12",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-10-13",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-15",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-17",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-18",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-19",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-20",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-21",
+        "avgSatisfaction": 3.0,
+        "count": 7
+      },
+      {
+        "date_str": "2025-10-23",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-24",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-25",
+        "avgSatisfaction": 3.33,
+        "count": 3
+      },
+      {
+        "date_str": "2025-10-26",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-10-27",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-10-28",
+        "avgSatisfaction": 5.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-29",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-10-30",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-11-01",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-02",
+        "avgSatisfaction": 3.4,
+        "count": 5
+      },
+      {
+        "date_str": "2025-11-03",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-11-05",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-07",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-08",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-09",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-11-10",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-11-11",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-12",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-11-13",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-14",
+        "avgSatisfaction": 4.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-11-15",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-11-16",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-11-17",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-11-18",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-11-19",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-20",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-11-21",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-23",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-25",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-27",
+        "avgSatisfaction": 2.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-11-29",
+        "avgSatisfaction": 3.0,
+        "count": 6
+      },
+      {
+        "date_str": "2025-11-30",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-12-01",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-12-02",
+        "avgSatisfaction": 3.0,
+        "count": 6
+      },
+      {
+        "date_str": "2025-12-03",
+        "avgSatisfaction": 2.8,
+        "count": 5
+      },
+      {
+        "date_str": "2025-12-04",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-05",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-06",
+        "avgSatisfaction": 4.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-12-07",
+        "avgSatisfaction": 3.0,
+        "count": 5
+      },
+      {
+        "date_str": "2025-12-08",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-09",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-12-10",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-11",
+        "avgSatisfaction": 3.25,
+        "count": 4
+      },
+      {
+        "date_str": "2025-12-12",
+        "avgSatisfaction": 2.8,
+        "count": 5
+      },
+      {
+        "date_str": "2025-12-13",
+        "avgSatisfaction": 4.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-14",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-12-15",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-16",
+        "avgSatisfaction": 3.0,
+        "count": 4
+      },
+      {
+        "date_str": "2025-12-17",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-18",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-12-19",
+        "avgSatisfaction": 4.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-20",
+        "avgSatisfaction": 2.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-12-21",
+        "avgSatisfaction": 3.0,
+        "count": 3
+      },
+      {
+        "date_str": "2025-12-22",
+        "avgSatisfaction": 3.17,
+        "count": 6
+      },
+      {
+        "date_str": "2025-12-24",
+        "avgSatisfaction": 3.67,
+        "count": 3
+      },
+      {
+        "date_str": "2025-12-25",
+        "avgSatisfaction": 3.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-26",
+        "avgSatisfaction": 2.5,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-27",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-28",
+        "avgSatisfaction": 3.0,
+        "count": 2
+      },
+      {
+        "date_str": "2025-12-29",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-12-30",
+        "avgSatisfaction": 3.0,
+        "count": 1
+      },
+      {
+        "date_str": "2025-12-31",
+        "avgSatisfaction": 2.25,
+        "count": 4
+      }
+    ],
+    "byAttraction": [
+      {
+        "name": "禅意小镇·拈花湾",
+        "avgSatisfaction": 3.03,
+        "visitorCount": 255
+      },
+      {
+        "name": "灵山胜境",
+        "avgSatisfaction": 3.04,
+        "visitorCount": 236
+      },
+      {
+        "name": "灵山大佛",
+        "avgSatisfaction": 3.12,
+        "visitorCount": 286
+      }
+    ],
+    "byDemographic": {
+      "byAge": [
+        {
+          "group": "0-18岁",
+          "avgSatisfaction": null,
+          "count": 0
+        },
+        {
+          "group": "19-30岁",
+          "avgSatisfaction": 3.0,
+          "count": 275
+        },
+        {
+          "group": "31-45岁",
+          "avgSatisfaction": 2.88,
+          "count": 303
+        },
+        {
+          "group": "46-60岁",
+          "avgSatisfaction": 3.23,
+          "count": 142
+        },
+        {
+          "group": "60岁以上",
+          "avgSatisfaction": 3.98,
+          "count": 57
+        }
+      ],
+      "byGender": {
+        "女": {
+          "avgSatisfaction": 3.08,
+          "count": 376
+        },
+        "男": {
+          "avgSatisfaction": 3.05,
+          "count": 401
+        }
+      }
+    }
+  },
+  "demographics": {
+    "ageGroups": [
+      {
+        "group": "0-18岁",
+        "count": 0
+      },
+      {
+        "group": "19-30岁",
+        "count": 275
+      },
+      {
+        "group": "31-45岁",
+        "count": 303
+      },
+      {
+        "group": "46-60岁",
+        "count": 142
+      },
+      {
+        "group": "60岁以上",
+        "count": 57
+      }
+    ],
+    "genderSplit": {
+      "男": 401,
+      "女": 376
+    },
+    "groupSize": [
+      {
+        "groupSize": 1,
+        "count": 111,
+        "avgTotalCost": 653.0
+      },
+      {
+        "groupSize": 2,
+        "count": 273,
+        "avgTotalCost": 776.0
+      },
+      {
+        "groupSize": 3,
+        "count": 219,
+        "avgTotalCost": 974.0
+      },
+      {
+        "groupSize": 4,
+        "count": 150,
+        "avgTotalCost": 1160.0
+      },
+      {
+        "groupSize": 5,
+        "count": 24,
+        "avgTotalCost": 1673.0
+      }
+    ]
+  },
+  "temporal": {
+    "dailyTrend": [
+      {
+        "date": "2025-01-03",
+        "visitors": 1
+      },
+      {
+        "date": "2025-01-04",
+        "visitors": 1
+      },
+      {
+        "date": "2025-01-09",
+        "visitors": 1
+      },
+      {
+        "date": "2025-01-12",
+        "visitors": 2
+      },
+      {
+        "date": "2025-01-13",
+        "visitors": 2
+      },
+      {
+        "date": "2025-01-14",
+        "visitors": 1
+      },
+      {
+        "date": "2025-01-17",
+        "visitors": 2
+      },
+      {
+        "date": "2025-01-18",
+        "visitors": 1
+      },
+      {
+        "date": "2025-01-19",
+        "visitors": 3
+      },
+      {
+        "date": "2025-01-23",
+        "visitors": 1
+      },
+      {
+        "date": "2025-01-25",
+        "visitors": 2
+      },
+      {
+        "date": "2025-01-26",
+        "visitors": 2
+      },
+      {
+        "date": "2025-01-27",
+        "visitors": 1
+      },
+      {
+        "date": "2025-01-29",
+        "visitors": 2
+      },
+      {
+        "date": "2025-01-30",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-01",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-03",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-04",
+        "visitors": 2
+      },
+      {
+        "date": "2025-02-08",
+        "visitors": 3
+      },
+      {
+        "date": "2025-02-09",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-11",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-13",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-15",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-17",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-18",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-19",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-22",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-26",
+        "visitors": 1
+      },
+      {
+        "date": "2025-02-27",
+        "visitors": 2
+      },
+      {
+        "date": "2025-02-28",
+        "visitors": 1
+      },
+      {
+        "date": "2025-03-01",
+        "visitors": 3
+      },
+      {
+        "date": "2025-03-02",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-03",
+        "visitors": 4
+      },
+      {
+        "date": "2025-03-05",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-06",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-07",
+        "visitors": 1
+      },
+      {
+        "date": "2025-03-09",
+        "visitors": 1
+      },
+      {
+        "date": "2025-03-10",
+        "visitors": 4
+      },
+      {
+        "date": "2025-03-11",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-13",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-14",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-15",
+        "visitors": 1
+      },
+      {
+        "date": "2025-03-16",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-17",
+        "visitors": 3
+      },
+      {
+        "date": "2025-03-18",
+        "visitors": 4
+      },
+      {
+        "date": "2025-03-21",
+        "visitors": 1
+      },
+      {
+        "date": "2025-03-22",
+        "visitors": 1
+      },
+      {
+        "date": "2025-03-23",
+        "visitors": 2
+      },
+      {
+        "date": "2025-03-24",
+        "visitors": 4
+      },
+      {
+        "date": "2025-03-25",
+        "visitors": 3
+      },
+      {
+        "date": "2025-03-26",
+        "visitors": 4
+      },
+      {
+        "date": "2025-03-27",
+        "visitors": 4
+      },
+      {
+        "date": "2025-03-29",
+        "visitors": 3
+      },
+      {
+        "date": "2025-03-30",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-01",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-02",
+        "visitors": 3
+      },
+      {
+        "date": "2025-04-05",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-06",
+        "visitors": 4
+      },
+      {
+        "date": "2025-04-07",
+        "visitors": 3
+      },
+      {
+        "date": "2025-04-08",
+        "visitors": 1
+      },
+      {
+        "date": "2025-04-09",
+        "visitors": 1
+      },
+      {
+        "date": "2025-04-10",
+        "visitors": 1
+      },
+      {
+        "date": "2025-04-11",
+        "visitors": 4
+      },
+      {
+        "date": "2025-04-12",
+        "visitors": 5
+      },
+      {
+        "date": "2025-04-13",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-14",
+        "visitors": 1
+      },
+      {
+        "date": "2025-04-15",
+        "visitors": 3
+      },
+      {
+        "date": "2025-04-16",
+        "visitors": 1
+      },
+      {
+        "date": "2025-04-17",
+        "visitors": 4
+      },
+      {
+        "date": "2025-04-18",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-19",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-20",
+        "visitors": 4
+      },
+      {
+        "date": "2025-04-22",
+        "visitors": 3
+      },
+      {
+        "date": "2025-04-23",
+        "visitors": 7
+      },
+      {
+        "date": "2025-04-24",
+        "visitors": 3
+      },
+      {
+        "date": "2025-04-25",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-26",
+        "visitors": 3
+      },
+      {
+        "date": "2025-04-27",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-28",
+        "visitors": 1
+      },
+      {
+        "date": "2025-04-29",
+        "visitors": 2
+      },
+      {
+        "date": "2025-04-30",
+        "visitors": 2
+      },
+      {
+        "date": "2025-05-01",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-02",
+        "visitors": 2
+      },
+      {
+        "date": "2025-05-03",
+        "visitors": 3
+      },
+      {
+        "date": "2025-05-04",
+        "visitors": 9
+      },
+      {
+        "date": "2025-05-05",
+        "visitors": 4
+      },
+      {
+        "date": "2025-05-06",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-07",
+        "visitors": 6
+      },
+      {
+        "date": "2025-05-08",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-09",
+        "visitors": 2
+      },
+      {
+        "date": "2025-05-10",
+        "visitors": 4
+      },
+      {
+        "date": "2025-05-12",
+        "visitors": 4
+      },
+      {
+        "date": "2025-05-13",
+        "visitors": 3
+      },
+      {
+        "date": "2025-05-14",
+        "visitors": 5
+      },
+      {
+        "date": "2025-05-15",
+        "visitors": 2
+      },
+      {
+        "date": "2025-05-16",
+        "visitors": 2
+      },
+      {
+        "date": "2025-05-17",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-18",
+        "visitors": 3
+      },
+      {
+        "date": "2025-05-19",
+        "visitors": 6
+      },
+      {
+        "date": "2025-05-20",
+        "visitors": 4
+      },
+      {
+        "date": "2025-05-21",
+        "visitors": 5
+      },
+      {
+        "date": "2025-05-22",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-24",
+        "visitors": 3
+      },
+      {
+        "date": "2025-05-25",
+        "visitors": 3
+      },
+      {
+        "date": "2025-05-26",
+        "visitors": 5
+      },
+      {
+        "date": "2025-05-27",
+        "visitors": 3
+      },
+      {
+        "date": "2025-05-28",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-29",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-30",
+        "visitors": 1
+      },
+      {
+        "date": "2025-05-31",
+        "visitors": 4
+      },
+      {
+        "date": "2025-06-01",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-03",
+        "visitors": 5
+      },
+      {
+        "date": "2025-06-04",
+        "visitors": 3
+      },
+      {
+        "date": "2025-06-05",
+        "visitors": 3
+      },
+      {
+        "date": "2025-06-06",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-07",
+        "visitors": 3
+      },
+      {
+        "date": "2025-06-08",
+        "visitors": 3
+      },
+      {
+        "date": "2025-06-09",
+        "visitors": 1
+      },
+      {
+        "date": "2025-06-10",
+        "visitors": 4
+      },
+      {
+        "date": "2025-06-11",
+        "visitors": 1
+      },
+      {
+        "date": "2025-06-12",
+        "visitors": 1
+      },
+      {
+        "date": "2025-06-13",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-14",
+        "visitors": 1
+      },
+      {
+        "date": "2025-06-16",
+        "visitors": 3
+      },
+      {
+        "date": "2025-06-17",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-18",
+        "visitors": 5
+      },
+      {
+        "date": "2025-06-19",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-20",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-21",
+        "visitors": 4
+      },
+      {
+        "date": "2025-06-22",
+        "visitors": 3
+      },
+      {
+        "date": "2025-06-23",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-24",
+        "visitors": 1
+      },
+      {
+        "date": "2025-06-25",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-26",
+        "visitors": 2
+      },
+      {
+        "date": "2025-06-27",
+        "visitors": 1
+      },
+      {
+        "date": "2025-06-28",
+        "visitors": 1
+      },
+      {
+        "date": "2025-06-30",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-01",
+        "visitors": 4
+      },
+      {
+        "date": "2025-07-02",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-03",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-04",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-05",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-06",
+        "visitors": 3
+      },
+      {
+        "date": "2025-07-07",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-08",
+        "visitors": 4
+      },
+      {
+        "date": "2025-07-09",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-10",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-11",
+        "visitors": 5
+      },
+      {
+        "date": "2025-07-12",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-13",
+        "visitors": 4
+      },
+      {
+        "date": "2025-07-14",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-15",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-16",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-17",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-18",
+        "visitors": 7
+      },
+      {
+        "date": "2025-07-20",
+        "visitors": 5
+      },
+      {
+        "date": "2025-07-21",
+        "visitors": 6
+      },
+      {
+        "date": "2025-07-22",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-23",
+        "visitors": 3
+      },
+      {
+        "date": "2025-07-24",
+        "visitors": 1
+      },
+      {
+        "date": "2025-07-25",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-26",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-27",
+        "visitors": 4
+      },
+      {
+        "date": "2025-07-28",
+        "visitors": 2
+      },
+      {
+        "date": "2025-07-31",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-01",
+        "visitors": 2
+      },
+      {
+        "date": "2025-08-02",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-03",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-04",
+        "visitors": 2
+      },
+      {
+        "date": "2025-08-05",
+        "visitors": 1
+      },
+      {
+        "date": "2025-08-06",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-07",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-08",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-09",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-10",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-12",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-13",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-14",
+        "visitors": 1
+      },
+      {
+        "date": "2025-08-15",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-16",
+        "visitors": 5
+      },
+      {
+        "date": "2025-08-17",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-18",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-19",
+        "visitors": 2
+      },
+      {
+        "date": "2025-08-20",
+        "visitors": 2
+      },
+      {
+        "date": "2025-08-21",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-22",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-24",
+        "visitors": 6
+      },
+      {
+        "date": "2025-08-25",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-26",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-27",
+        "visitors": 2
+      },
+      {
+        "date": "2025-08-28",
+        "visitors": 3
+      },
+      {
+        "date": "2025-08-29",
+        "visitors": 4
+      },
+      {
+        "date": "2025-08-30",
+        "visitors": 1
+      },
+      {
+        "date": "2025-08-31",
+        "visitors": 2
+      },
+      {
+        "date": "2025-09-01",
+        "visitors": 5
+      },
+      {
+        "date": "2025-09-02",
+        "visitors": 3
+      },
+      {
+        "date": "2025-09-03",
+        "visitors": 8
+      },
+      {
+        "date": "2025-09-04",
+        "visitors": 1
+      },
+      {
+        "date": "2025-09-05",
+        "visitors": 8
+      },
+      {
+        "date": "2025-09-06",
+        "visitors": 3
+      },
+      {
+        "date": "2025-09-08",
+        "visitors": 4
+      },
+      {
+        "date": "2025-09-09",
+        "visitors": 3
+      },
+      {
+        "date": "2025-09-10",
+        "visitors": 5
+      },
+      {
+        "date": "2025-09-11",
+        "visitors": 2
+      },
+      {
+        "date": "2025-09-12",
+        "visitors": 3
+      },
+      {
+        "date": "2025-09-13",
+        "visitors": 1
+      },
+      {
+        "date": "2025-09-14",
+        "visitors": 1
+      },
+      {
+        "date": "2025-09-15",
+        "visitors": 5
+      },
+      {
+        "date": "2025-09-16",
+        "visitors": 2
+      },
+      {
+        "date": "2025-09-17",
+        "visitors": 7
+      },
+      {
+        "date": "2025-09-18",
+        "visitors": 2
+      },
+      {
+        "date": "2025-09-19",
+        "visitors": 9
+      },
+      {
+        "date": "2025-09-20",
+        "visitors": 2
+      },
+      {
+        "date": "2025-09-21",
+        "visitors": 3
+      },
+      {
+        "date": "2025-09-22",
+        "visitors": 3
+      },
+      {
+        "date": "2025-09-23",
+        "visitors": 5
+      },
+      {
+        "date": "2025-09-24",
+        "visitors": 2
+      },
+      {
+        "date": "2025-09-25",
+        "visitors": 2
+      },
+      {
+        "date": "2025-09-26",
+        "visitors": 5
+      },
+      {
+        "date": "2025-09-27",
+        "visitors": 5
+      },
+      {
+        "date": "2025-09-28",
+        "visitors": 1
+      },
+      {
+        "date": "2025-09-29",
+        "visitors": 5
+      },
+      {
+        "date": "2025-09-30",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-01",
+        "visitors": 3
+      },
+      {
+        "date": "2025-10-02",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-05",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-07",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-08",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-09",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-10",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-11",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-12",
+        "visitors": 3
+      },
+      {
+        "date": "2025-10-13",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-15",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-17",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-18",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-19",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-20",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-21",
+        "visitors": 7
+      },
+      {
+        "date": "2025-10-23",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-24",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-25",
+        "visitors": 3
+      },
+      {
+        "date": "2025-10-26",
+        "visitors": 3
+      },
+      {
+        "date": "2025-10-27",
+        "visitors": 2
+      },
+      {
+        "date": "2025-10-28",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-29",
+        "visitors": 1
+      },
+      {
+        "date": "2025-10-30",
+        "visitors": 4
+      },
+      {
+        "date": "2025-11-01",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-02",
+        "visitors": 5
+      },
+      {
+        "date": "2025-11-03",
+        "visitors": 4
+      },
+      {
+        "date": "2025-11-05",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-07",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-08",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-09",
+        "visitors": 2
+      },
+      {
+        "date": "2025-11-10",
+        "visitors": 3
+      },
+      {
+        "date": "2025-11-11",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-12",
+        "visitors": 2
+      },
+      {
+        "date": "2025-11-13",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-14",
+        "visitors": 2
+      },
+      {
+        "date": "2025-11-15",
+        "visitors": 3
+      },
+      {
+        "date": "2025-11-16",
+        "visitors": 2
+      },
+      {
+        "date": "2025-11-17",
+        "visitors": 2
+      },
+      {
+        "date": "2025-11-18",
+        "visitors": 2
+      },
+      {
+        "date": "2025-11-19",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-20",
+        "visitors": 2
+      },
+      {
+        "date": "2025-11-21",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-23",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-25",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-27",
+        "visitors": 1
+      },
+      {
+        "date": "2025-11-29",
+        "visitors": 6
+      },
+      {
+        "date": "2025-11-30",
+        "visitors": 3
+      },
+      {
+        "date": "2025-12-01",
+        "visitors": 1
+      },
+      {
+        "date": "2025-12-02",
+        "visitors": 6
+      },
+      {
+        "date": "2025-12-03",
+        "visitors": 5
+      },
+      {
+        "date": "2025-12-04",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-05",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-06",
+        "visitors": 1
+      },
+      {
+        "date": "2025-12-07",
+        "visitors": 5
+      },
+      {
+        "date": "2025-12-08",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-09",
+        "visitors": 3
+      },
+      {
+        "date": "2025-12-10",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-11",
+        "visitors": 4
+      },
+      {
+        "date": "2025-12-12",
+        "visitors": 5
+      },
+      {
+        "date": "2025-12-13",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-14",
+        "visitors": 4
+      },
+      {
+        "date": "2025-12-15",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-16",
+        "visitors": 4
+      },
+      {
+        "date": "2025-12-17",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-18",
+        "visitors": 3
+      },
+      {
+        "date": "2025-12-19",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-20",
+        "visitors": 3
+      },
+      {
+        "date": "2025-12-21",
+        "visitors": 3
+      },
+      {
+        "date": "2025-12-22",
+        "visitors": 6
+      },
+      {
+        "date": "2025-12-24",
+        "visitors": 3
+      },
+      {
+        "date": "2025-12-25",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-26",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-27",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-28",
+        "visitors": 2
+      },
+      {
+        "date": "2025-12-29",
+        "visitors": 1
+      },
+      {
+        "date": "2025-12-30",
+        "visitors": 1
+      },
+      {
+        "date": "2025-12-31",
+        "visitors": 4
+      }
+    ],
+    "monthlyTrend": [
+      {
+        "period": "1月",
+        "count": 23,
+        "avgSatisfaction": 3.04
+      },
+      {
+        "period": "2月",
+        "count": 19,
+        "avgSatisfaction": 2.95
+      },
+      {
+        "period": "3月",
+        "count": 59,
+        "avgSatisfaction": 3.05
+      },
+      {
+        "period": "4月",
+        "count": 70,
+        "avgSatisfaction": 2.99
+      },
+      {
+        "period": "5月",
+        "count": 90,
+        "avgSatisfaction": 3.09
+      },
+      {
+        "period": "6月",
+        "count": 63,
+        "avgSatisfaction": 3.02
+      },
+      {
+        "period": "7月",
+        "count": 73,
+        "avgSatisfaction": 3.11
+      },
+      {
+        "period": "8月",
+        "count": 88,
+        "avgSatisfaction": 3.08
+      },
+      {
+        "period": "9月",
+        "count": 107,
+        "avgSatisfaction": 2.97
+      },
+      {
+        "period": "10月",
+        "count": 50,
+        "avgSatisfaction": 3.18
+      },
+      {
+        "period": "11月",
+        "count": 49,
+        "avgSatisfaction": 3.24
+      },
+      {
+        "period": "12月",
+        "count": 86,
+        "avgSatisfaction": 3.08
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "level": "info",
+      "title": "「灵山大佛」满意度有提升空间",
+      "description": "该景点平均满意度 3.12 分，接近整体水平（3.07），建议优化服务细节，进一步提升游客体验。"
+    },
+    {
+      "level": "warning",
+      "title": "「禅意小镇·拈花湾」满意度低于整体均值",
+      "description": "该景点平均满意度 3.03 分，低于整体均值 3.07 分。建议排查服务流程与设施问题（255 条记录）。"
+    },
+    {
+      "level": "warning",
+      "title": "「灵山胜境」满意度低于整体均值",
+      "description": "该景点平均满意度 3.04 分，低于整体均值 3.07 分。建议排查服务流程与设施问题（236 条记录）。"
+    },
+    {
+      "level": "info",
+      "title": "餐饮消费占比突出",
+      "description": "餐饮消费占总消费 26.3%，建议丰富灵山素斋、拈花湾禅食等特色餐饮业态、推出主题套餐以提升客单价。"
+    },
+    {
+      "level": "info",
+      "title": "年轻游客满意度有待提升",
+      "description": "19-30岁年轻游客群体满意度略低，建议在灵山/拈花湾增加互动体验、禅意打卡点、社交媒体传播元素以提升年轻客群体验。"
+    },
+    {
+      "level": "info",
+      "title": "团体游客平均 2.6 人出行",
+      "description": "团体游客占比较高，建议优化团体导览服务、设置团体专用通道和集合点，推出家庭/亲友套票。"
+    },
+    {
+      "level": "success",
+      "title": "整体满意度表现良好",
+      "description": "22% 游客给出 4 分及以上评价，灵山景区（灵山大佛、灵山胜境）和禅意小镇·拈花湾整体服务水平处于较优水平，继续保持。"
+    },
+    {
+      "level": "info",
+      "title": "数据样本充足（共 777 条记录）",
+      "description": "当前分析基于灵山景区（灵山大佛、灵山胜境）和禅意小镇·拈花湾的完整游客行为数据，统计可信度高。建议定期分析数据变化，持续优化运营策略。"
+    }
+  ]
+}

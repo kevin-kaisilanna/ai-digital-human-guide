@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>登录诊断</title>
+  <style>
+    body { font-family: monospace; max-width: 500px; margin: 30px auto; padding: 20px; background: #f5efe6; }
+    .card { background: #fff; border-radius: 12px; padding: 20px; margin: 16px 0; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    h2 { font-size: 16px; margin: 0 0 12px; }
+    input, button { display: block; width: 100%; padding: 10px 14px; margin: 8px 0; border-radius: 8px; font-size: 14px; font-family: inherit; box-sizing: border-box; }
+    input { border: 1px solid #ddd; }
+    button { border: none; background: #d4984a; color: #fff; font-weight: 600; cursor: pointer; }
+    button:hover { background: #c8843c; }
+    .log { background: #1e1e1e; color: #4ec9b0; padding: 12px; border-radius: 8px; font-size: 12px; white-space: pre-wrap; max-height: 300px; overflow-y: auto; }
+    .log .error { color: #f44747; }
+    .log .success { color: #4ec9b0; }
+    .log .info { color: #9cdcfe; }
+  </style>
+</head>
+<body>
+  <h2>🔍 登录 API 诊断</h2>
+  <div class="card">
+    <input id="user" type="text" placeholder="用户名" value="admin" />
+    <input id="pwd" type="password" placeholder="密码" value="admin123" />
+    <button onclick="testLogin()">测试登录 POST /api/user/login</button>
+    <button onclick="testUsersJson()" style="margin-top:4px;background:#888;">检查 users.json 是否可访问</button>
+  </div>
+  <div class="log" id="log"></div>
+
+  <script>
+    const logEl = document.getElementById('log')
+    function log(msg, cls = 'info') {
+      const time = new Date().toLocaleTimeString()
+      logEl.innerHTML += `<span class="${cls}">[${time}] ${msg}</span>\n`
+      logEl.scrollTop = logEl.scrollHeight
+    }
+
+    async function testUsersJson() {
+      log('📡 GET /data/users.json …', 'info')
+      try {
+        const r = await fetch('/data/users.json')
+        const data = await r.json()
+        log(`✅ users.json 可访问，包含 ${Object.keys(data).length} 个用户: ${Object.keys(data).join(', ')}`, 'success')
+        log(JSON.stringify(data, null, 2), 'info')
+      } catch (e) {
+        log(`❌ 无法访问 users.json: ${e.message}`, 'error')
+      }
+    }
+
+    async function testLogin() {
+      const user = document.getElementById('user').value.trim()
+      const pwd = document.getElementById('pwd').value
+      log(`📡 POST /api/user/login { username:"${user}", password:"${'*'.repeat(pwd.length)}" }`, 'info')
+      try {
+        const r = await fetch('/api/user/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: user, password: pwd }),
+        })
+        const data = await r.json()
+        if (r.ok) {
+          log(`✅ 登录成功! token=${data.token}`, 'success')
+          log(`   user: ${JSON.stringify(data.user)}`, 'success')
+        } else {
+          log(`❌ 登录失败 (HTTP ${r.status}): ${data.error || JSON.stringify(data)}`, 'error')
+        }
+      } catch (e) {
+        log(`❌ 网络错误: ${e.message}`, 'error')
+        log(`   这通常意味着 Vite 插件未拦截请求或 CORS 问题`, 'error')
+      }
+    }
+
+    // 页面加载时自动检测
+    window.onload = () => {
+      log('🚀 诊断页面就绪', 'info')
+      log(`   location: ${location.origin}`, 'info')
+      log(`   localStorage auth_token: ${localStorage.getItem('auth_token') ? '✅ 存在' : '⛔ 不存在'}`, 'info')
+      log(`   localStorage visitor_app_users: ${localStorage.getItem('visitor_app_users') ? '✅ 存在' : '⛔ 不存在'}`, 'info')
+    }
+  </script>
+</body>
+</html>

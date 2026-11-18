@@ -1,0 +1,40 @@
+{
+  "admins": [
+    {
+      "username": "admin",
+      "passwordHash": "001bb6641b40a7f3",
+      "email": "admin@lingshan.com",
+      "role": "超级管理员",
+      "createdAt": "2026-06-17T02:45:58.612Z"
+    },
+    {
+      "username": "operator1",
+      "passwordHash": "001bb6641b40a7f3",
+      "email": "op1@lingshan.com",
+      "role": "????",
+      "createdAt": "2026-06-17T12:00:00.000Z"
+    },
+    {
+      "username": "123",
+      "passwordHash": "00197cf3cd60a7f3",
+      "email": "1234@qq.com",
+      "role": "管理员",
+      "createdAt": "2026-06-17T12:29:03.667Z"
+    },
+    {
+      "username": "15881974172",
+      "passwordHash": "QFd5eDIwNjE4OTZfX2xpbmdzaGFuX3NhbHRfXw==",
+      "email": "",
+      "role": "管理员",
+      "createdAt": "2026-06-17T02:47:05.234Z"
+    },
+    {
+      "username": "admin1",
+      "passwordHash": "00197cf3cd60a7f3",
+      "email": "12345@qq.com",
+      "role": "管理员",
+      "createdAt": "2026-07-11T04:54:15.818Z"
+    }
+  ],
+  "version": 25
+}

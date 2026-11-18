@@ -1,0 +1,35 @@
+{
+  "1234": {
+    "username": "1234",
+    "password": "1234",
+    "phone": "",
+    "displayName": "5",
+    "createdAt": "2026-06-17T06:25:43.911Z",
+    "status": "active",
+    "lastLoginAt": "2026-07-11T05:29:01.108Z",
+    "totalChats": 0,
+    "totalMessages": 0
+  },
+  "admin": {
+    "username": "admin",
+    "password": "admin123",
+    "phone": "",
+    "displayName": "管理员",
+    "createdAt": "2025-01-01T00:00:00.000Z",
+    "status": "active",
+    "lastLoginAt": "2026-07-11T07:15:29.585Z",
+    "totalChats": 2,
+    "totalMessages": 14
+  },
+  "visitor": {
+    "username": "visitor",
+    "password": "1234",
+    "phone": "",
+    "displayName": "游客小云",
+    "createdAt": "2025-06-01T00:00:00.000Z",
+    "status": "active",
+    "lastLoginAt": "2026-06-20T10:15:00.000Z",
+    "totalChats": 3,
+    "totalMessages": 8
+  }
+}

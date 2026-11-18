@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "username": "1234",
+      "displayName": "5",
+      "createdAt": "2026-06-17T06:25:43.911Z",
+      "status": "active",
+      "lastLoginAt": "2026-07-11T05:29:01.108Z",
+      "totalChats": 0,
+      "totalMessages": 0,
+      "notes": "",
+      "disabledAt": null
+    },
+    {
+      "username": "admin",
+      "displayName": "管理员",
+      "createdAt": "2025-01-01T00:00:00.000Z",
+      "status": "active",
+      "lastLoginAt": "2026-07-11T06:58:17.875Z",
+      "totalChats": 6,
+      "totalMessages": 73,
+      "notes": "",
+      "disabledAt": null
+    },
+    {
+      "username": "visitor",
+      "displayName": "游客小云",
+      "createdAt": "2025-06-01T00:00:00.000Z",
+      "status": "active",
+      "lastLoginAt": "2026-06-20T10:15:00.000Z",
+      "totalChats": 3,
+      "totalMessages": 16,
+      "notes": "",
+      "disabledAt": null
+    }
+  ],
+  "version": 67,
+  "lastSyncedAt": "2026-07-11T07:14:07.009Z"
+}
